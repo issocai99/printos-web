@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== SEO básico ===== -->
+<title>PrintOS — Alquiler de impresoras + IA documental para empresas</title>
+<meta name="description" content="Alquiler de impresoras profesionales con soluciones de IA: escaneo, búsqueda inteligente y carga automática de facturas en Tango y otros sistemas. Para estudios contables, jurídicos y PyMEs en Argentina." />
+<meta name="theme-color" content="#0E0F0C" />
+
+<!-- ===== Open Graph (WhatsApp / LinkedIn / Facebook) ===== -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="PrintOS — Impresión inteligente para empresas" />
+<meta property="og:description" content="Alquiler de impresoras + IA para escaneo y carga automática de facturas. Pensado para estudios contables, jurídicos y PyMEs." />
+<meta property="og:locale" content="es_AR" />
+
+<!-- ===== Twitter ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="PrintOS — Impresión inteligente" />
+<meta name="twitter:description" content="Alquiler de impresoras + IA documental para empresas." />
+
+<!-- ===== Favicon SVG inline (no necesita archivo extra) ===== -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23C8FF3E'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-weight='600' font-size='18' fill='%230E0F0C'%3EP%3C/text%3E%3C/svg%3E" />
+
+<!-- ===== Fonts ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0E0F0C; --bg-2:#15170F; --ink:#F4F1E8; --ink-dim:#A8A395;
+    --line:#262820; --line-2:#33362C; --accent:#C8FF3E; --accent-soft:#1F2A0E;
+    --warm:#E9DFC6; --paper:#F4F1E8; --paper-2:#EAE5D6; --ink-on-paper:#15170F;
+    --radius:14px; --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Manrope',-apple-system,sans-serif;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .display{font-family:'Fraunces',Georgia,serif;font-weight:400;font-variation-settings:"opsz" 144,"SOFT" 50;letter-spacing:-0.02em;line-height:0.98}
+  .display em{font-style:italic;font-weight:300;color:var(--ink-dim)}
+  .mono{font-family:'JetBrains Mono',monospace;letter-spacing:0}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-dim);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  section{padding:120px 0;position:relative}
+  @media(max-width:720px){section{padding:80px 0}}
+  nav.top{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(12px);background:rgba(14,15,12,0.7);border-bottom:1px solid var(--line)}
+  nav.top .inner{max-width:var(--maxw);margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand-mark{width:30px;height:30px;background:var(--accent);border-radius:6px;display:grid;place-items:center;color:var(--bg);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:14px;position:relative;overflow:hidden}
+  .brand-mark::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 50%,rgba(0,0,0,0.15) 50%)}
+  .brand-name{font-family:'Fraunces',serif;font-size:20px;font-weight:500;letter-spacing:-0.01em}
+  .brand-name span{color:var(--accent)}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{color:var(--ink-dim);text-decoration:none;font-size:14px;transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  @media(max-width:820px){.nav-links a:not(.btn){display:none}}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;transition:all .25s ease;border:1px solid transparent;cursor:pointer}
+  .btn-primary{background:var(--accent);color:var(--bg)}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 30px -10px rgba(200,255,62,0.5)}
+  .btn-ghost{border-color:var(--line-2);color:var(--ink)}
+  .btn-ghost:hover{background:var(--line);border-color:var(--ink-dim)}
+  .btn-arrow{transition:transform .25s}
+  .btn:hover .btn-arrow{transform:translateX(3px)}
+  .hero{padding-top:160px;padding-bottom:80px;position:relative;overflow:hidden}
+  .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 30%,transparent 75%);opacity:0.5;pointer-events:none}
+  .hero-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");opacity:0.04;pointer-events:none;mix-blend-mode:overlay}
+  .hero-inner{position:relative;z-index:1}
+  .hero-tag{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border:1px solid var(--line-2);border-radius:999px;font-size:12px;color:var(--ink-dim);margin-bottom:32px;animation:fadeUp .9s .1s both}
+  .hero-tag .dot{width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:10px}
+  .hero-tag b{color:var(--ink);font-weight:500}
+  h1.hero-title{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(48px,7.5vw,108px);line-height:0.96;letter-spacing:-0.035em;max-width:14ch;margin-bottom:32px;animation:fadeUp 1s .2s both}
+  h1.hero-title em{font-style:italic;font-weight:300;color:var(--accent);font-variation-settings:"opsz" 144}
+  .hero-sub{max-width:560px;color:var(--ink-dim);font-size:18px;margin-bottom:44px;animation:fadeUp 1s .35s both}
+  .hero-sub b{color:var(--ink);font-weight:500}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 1s .5s both}
+  .hero-meta{margin-top:80px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;border-top:1px solid var(--line);padding-top:32px;animation:fadeUp 1s .65s both}
+  @media(max-width:720px){.hero-meta{grid-template-columns:repeat(2,1fr);gap:32px 20px}}
+  .hero-meta-item .num{font-family:'Fraunces',serif;font-size:42px;font-weight:400;letter-spacing:-0.03em;line-height:1}
+  .hero-meta-item .num em{font-style:italic;color:var(--accent);font-weight:300}
+  .hero-meta-item .lbl{font-size:12px;color:var(--ink-dim);margin-top:8px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.1em}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 0;overflow:hidden;background:var(--bg-2)}
+  .marquee-track{display:flex;gap:64px;animation:slide 35s linear infinite;white-space:nowrap}
+  .marquee-item{font-family:'Fraunces',serif;font-size:22px;color:var(--ink-dim);display:flex;align-items:center;gap:64px;flex-shrink:0}
+  .marquee-item::after{content:"·";color:var(--accent);font-size:30px}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .section-head{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;margin-bottom:72px}
+  @media(max-width:820px){.section-head{grid-template-columns:1fr;gap:24px}}
+  .section-head h2{font-family:'Fraunces',serif;font-size:clamp(36px,5vw,64px);font-weight:400;letter-spacing:-0.025em;line-height:1}
+  .section-head h2 em{font-style:italic;color:var(--accent);font-weight:300}
+  .section-head p{color:var(--ink-dim);font-size:17px;max-width:520px}
+  .solutions-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .sol-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:36px;position:relative;overflow:hidden;transition:transform .4s ease,border-color .4s ease;min-height:340px;display:flex;flex-direction:column}
+  .sol-card:hover{transform:translateY(-4px);border-color:var(--line-2)}
+  .sol-card.span-7{grid-column:span 7}.sol-card.span-5{grid-column:span 5}
+  .sol-card.span-6{grid-column:span 6}.sol-card.span-12{grid-column:span 12}
+  @media(max-width:820px){.sol-card.span-7,.sol-card.span-5,.sol-card.span-6,.sol-card.span-12{grid-column:span 12}}
+  .sol-card .num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-dim);letter-spacing:0.15em}
+  .sol-card h3{font-family:'Fraunces',serif;font-size:32px;font-weight:400;letter-spacing:-0.02em;margin-top:18px;line-height:1.1}
+  .sol-card h3 em{font-style:italic;color:var(--accent)}
+  .sol-card p{color:var(--ink-dim);margin-top:16px;font-size:15px;max-width:46ch}
+  .sol-card .icon{width:48px;height:48px;border:1px solid var(--line-2);border-radius:10px;display:grid;place-items:center;margin-bottom:8px;color:var(--accent)}
+  .sol-card .tags{margin-top:auto;padding-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+  .tag{font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 10px;border:1px solid var(--line-2);border-radius:5px;color:var(--ink-dim)}
+  .sol-card.feature{background:linear-gradient(180deg,#1A1D14 0%,#15170F 100%);border-color:var(--line-2)}
+  .sol-card.feature .visual{margin-top:24px;border:1px solid var(--line-2);border-radius:10px;background:var(--bg);padding:18px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-dim)}
+  .sol-card.feature .visual .row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .sol-card.feature .visual .row:last-child{border-bottom:none}
+  .sol-card.feature .visual .row .ok{color:var(--accent)}
+  .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:6px;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,255,62,0.6)}50%{box-shadow:0 0 0 8px rgba(200,255,62,0)}}
+  .how{background:var(--paper);color:var(--ink-on-paper);position:relative}
+  .how::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");opacity:0.05;pointer-events:none}
+  .how .container{position:relative}
+  .how .eyebrow{color:#5C5847}
+  .how .eyebrow::before{background:var(--ink-on-paper)}
+  .how h2{color:var(--ink-on-paper)}
+  .how h2 em{color:#3F4A1B}
+  .how .section-head p{color:#5C5847}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #C9C2AE}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+  .step{padding:36px 28px;border-right:1px solid #C9C2AE;border-bottom:1px solid #C9C2AE;position:relative}
+  .step:last-child{border-right:none}
+  @media(max-width:820px){.step{border-right:none}}
+  .step .step-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:#5C5847;letter-spacing:0.15em;margin-bottom:80px;display:flex;justify-content:space-between}
+  .step h4{font-family:'Fraunces',serif;font-size:26px;font-weight:400;letter-spacing:-0.02em;line-height:1.1;margin-bottom:12px}
+  .step h4 em{font-style:italic;color:#3F4A1B}
+  .step p{font-size:14px;color:#3D3B33}
+  .industries-list{border-top:1px solid var(--line)}
+  .industry{display:grid;grid-template-columns:80px 1fr 2fr auto;gap:32px;align-items:center;padding:32px 12px;border-bottom:1px solid var(--line);transition:background .3s ease,padding .3s ease;cursor:pointer}
+  .industry:hover{background:linear-gradient(90deg,transparent 0%,rgba(200,255,62,0.04) 100%);padding-left:24px}
+  .industry:hover .industry-cta{color:var(--accent)}
+  .industry .industry-num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-dim)}
+  .industry h3{font-family:'Fraunces',serif;font-size:34px;font-weight:400;letter-spacing:-0.02em}
+  .industry h3 em{font-style:italic;color:var(--ink-dim)}
+  .industry p{color:var(--ink-dim);font-size:15px}
+  .industry-cta{color:var(--ink-dim);transition:color .25s;font-family:'JetBrains Mono',monospace;font-size:12px;display:flex;align-items:center;gap:8px}
+  @media(max-width:820px){.industry{grid-template-columns:1fr;gap:8px;padding:24px 0}.industry h3{font-size:26px}.industry .industry-num,.industry-cta{display:none}}
+  .ai-feature{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  @media(max-width:820px){.ai-grid{grid-template-columns:1fr;gap:48px}}
+  .ai-grid h2{font-family:'Fraunces',serif;font-size:clamp(34px,4.5vw,52px);font-weight:400;letter-spacing:-0.025em;line-height:1.05}
+  .ai-grid h2 em{font-style:italic;color:var(--accent);font-weight:300}
+  .ai-grid p{color:var(--ink-dim);margin-top:20px;font-size:16px}
+  .ai-features-list{margin-top:32px;list-style:none}
+  .ai-features-list li{padding:14px 0;border-top:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+  .ai-features-list li:last-child{border-bottom:1px solid var(--line)}
+  .ai-features-list .check{color:var(--accent);flex-shrink:0;margin-top:3px}
+  .ai-features-list b{font-weight:500;color:var(--ink)}
+  .ai-features-list span{color:var(--ink-dim);font-size:14px;display:block;margin-top:2px}
+  .mockup{background:var(--bg);border:1px solid var(--line-2);border-radius:var(--radius);padding:24px;font-family:'JetBrains Mono',monospace;font-size:13px;box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);position:relative}
+  .mockup-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:16px}
+  .mockup-dots{display:flex;gap:6px}
+  .mockup-dots span{width:9px;height:9px;border-radius:50%;background:var(--line-2)}
+  .mockup-dots span:first-child{background:#FF5F57}
+  .mockup-dots span:nth-child(2){background:#FEBC2E}
+  .mockup-dots span:last-child{background:var(--accent)}
+  .mockup-title{color:var(--ink-dim);font-size:11px}
+  .mockup-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);color:var(--ink-dim)}
+  .mockup-row:last-child{border-bottom:none}
+  .mockup-row .key{color:var(--ink-dim)}
+  .mockup-row .val{color:var(--ink)}
+  .mockup-row .val.ok{color:var(--accent)}
+  .mockup-search{background:var(--bg-2);border:1px solid var(--line-2);border-radius:8px;padding:10px 14px;margin:14px 0;color:var(--ink-dim);display:flex;align-items:center;gap:10px}
+  .mockup-search .cursor{width:1.5px;height:14px;background:var(--accent);animation:blink 1s steps(2) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:820px){.plans-grid{grid-template-columns:1fr}}
+  .plan{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:36px;display:flex;flex-direction:column;position:relative}
+  .plan.featured{background:linear-gradient(180deg,rgba(200,255,62,0.04) 0%,transparent 100%);border-color:var(--accent)}
+  .plan-badge{position:absolute;top:-1px;right:24px;background:var(--accent);color:var(--bg);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;padding:5px 10px;border-radius:0 0 6px 6px;text-transform:uppercase}
+  .plan h3{font-family:'Fraunces',serif;font-size:28px;font-weight:400;letter-spacing:-0.02em}
+  .plan .plan-tag{color:var(--ink-dim);font-size:14px;margin-top:6px}
+  .plan .plan-price{margin:32px 0 8px;font-family:'Fraunces',serif;font-size:54px;line-height:1;font-weight:400;letter-spacing:-0.03em}
+  .plan .plan-price .currency{font-size:24px;color:var(--ink-dim);vertical-align:top;margin-right:4px}
+  .plan .plan-price .per{font-size:14px;color:var(--ink-dim);font-family:'Manrope',sans-serif;font-weight:400;letter-spacing:0;margin-left:4px}
+  .plan .plan-desc{color:var(--ink-dim);font-size:14px;border-top:1px solid var(--line);padding-top:20px;margin-top:8px}
+  .plan ul{list-style:none;margin:24px 0 32px;flex:1}
+  .plan ul li{padding:9px 0;font-size:14px;display:flex;gap:10px;align-items:flex-start;color:var(--ink)}
+  .plan ul li svg{flex-shrink:0;margin-top:3px;color:var(--accent)}
+  .plan ul li.muted{color:var(--ink-dim)}
+  .plan ul li.muted svg{color:var(--ink-dim)}
+  .plan .btn{justify-content:center;width:100%}
+  .faq-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:flex-start}
+  @media(max-width:820px){.faq-grid{grid-template-columns:1fr;gap:32px}}
+  details.faq{border-top:1px solid var(--line);padding:24px 0;cursor:pointer}
+  details.faq:last-of-type{border-bottom:1px solid var(--line)}
+  details.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'Fraunces',serif;font-size:22px;letter-spacing:-0.015em;font-weight:400}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary .plus{width:32px;height:32px;border:1px solid var(--line-2);border-radius:50%;display:grid;place-items:center;flex-shrink:0;margin-left:24px;transition:transform .3s,border-color .3s,background .3s;color:var(--ink-dim)}
+  details.faq[open] summary .plus{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:var(--bg)}
+  details.faq p{color:var(--ink-dim);margin-top:14px;font-size:15px;max-width:60ch;padding-right:60px}
+  .cta-final{background:var(--paper);color:var(--ink-on-paper);position:relative;overflow:hidden}
+  .cta-final::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");opacity:0.05;pointer-events:none}
+  .cta-final-inner{position:relative;text-align:center;max-width:800px;margin:0 auto}
+  .cta-final h2{font-family:'Fraunces',serif;font-size:clamp(48px,7vw,90px);font-weight:400;letter-spacing:-0.03em;line-height:0.98}
+  .cta-final h2 em{font-style:italic;color:#3F4A1B;font-weight:300}
+  .cta-final p{color:#3D3B33;font-size:18px;margin:28px auto 0;max-width:520px}
+  .cta-final .cta-row{margin-top:42px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta-final .btn-primary{background:var(--ink-on-paper);color:var(--paper)}
+  .cta-final .btn-primary:hover{box-shadow:0 10px 30px -10px rgba(0,0,0,0.4)}
+  .cta-final .btn-ghost{border-color:#C9C2AE;color:var(--ink-on-paper)}
+  .cta-final .btn-ghost:hover{background:var(--paper-2);border-color:var(--ink-on-paper)}
+  .contact-form{margin-top:48px;text-align:left;background:rgba(255,255,255,0.5);border:1px solid #C9C2AE;border-radius:var(--radius);padding:32px}
+  .contact-form .field{margin-bottom:18px}
+  .contact-form label{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#5C5847;margin-bottom:8px}
+  .contact-form input,.contact-form textarea,.contact-form select{width:100%;background:var(--paper);border:1px solid #C9C2AE;border-radius:8px;padding:12px 14px;font-family:'Manrope',sans-serif;font-size:15px;color:var(--ink-on-paper);transition:border-color .2s}
+  .contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:none;border-color:#3F4A1B}
+  .contact-form textarea{min-height:100px;resize:vertical;font-family:'Manrope',sans-serif}
+  .contact-form .row-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:600px){.contact-form .row-2{grid-template-columns:1fr}}
+  .contact-form button{width:100%;justify-content:center;margin-top:12px;padding:14px;font-size:15px}
+  .form-msg{margin-top:16px;font-size:14px;text-align:center;color:#3F4A1B;font-weight:500;min-height:20px}
+  footer{background:var(--bg);padding:80px 0 40px;border-top:1px solid var(--line)}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+  @media(max-width:820px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+  .footer-brand p{color:var(--ink-dim);margin-top:18px;max-width:320px;font-size:14px}
+  .footer-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--ink-dim);margin-bottom:16px}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .footer-col a{color:var(--ink);text-decoration:none;font-size:14px;transition:color .2s}
+  .footer-col a:hover{color:var(--accent)}
+  .footer-bottom{border-top:1px solid var(--line);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--ink-dim)}
+  .footer-bottom .mono{font-size:12px}
+  .giant{font-family:'Fraunces',serif;font-size:clamp(80px,18vw,260px);font-weight:300;letter-spacing:-0.05em;line-height:0.85;margin:60px 0 30px;color:var(--ink);overflow:hidden}
+  .giant em{font-style:italic;color:var(--accent);font-weight:200}
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="inner">
+    <a href="#" class="brand"><div class="brand-mark">P</div><span class="brand-name">Print<span>OS</span></span></a>
+    <div class="nav-links">
+      <a href="#soluciones">Soluciones</a>
+      <a href="#industrias">Industrias</a>
+      <a href="#planes">Planes</a>
+      <a href="#contacto" class="btn btn-primary">Hablar con un asesor
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-noise"></div>
+  <div class="container hero-inner">
+    <div class="hero-tag"><span class="dot">→</span>Alquiler de impresoras + IA documental <b>· Argentina</b></div>
+    <h1 class="display hero-title">Tu impresora dejó de ser un fierro.<br>Ahora es <em>inteligencia</em>.</h1>
+    <p class="hero-sub">En PrintOS combinamos <b>alquiler de equipos profesionales</b> con <b>soluciones de IA</b> para escanear, buscar y cargar facturas en tu sistema contable de forma automática. Menos papel suelto, menos data entry, más cabeza para lo importante.</p>
+    <div class="hero-cta">
+      <a href="#contacto" class="btn btn-primary">Pedir una demo
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#soluciones" class="btn btn-ghost">Ver soluciones</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><div class="num">+<em>92</em>%</div><div class="lbl">Lectura automática<br>de facturas</div></div>
+      <div class="hero-meta-item"><div class="num"><em>3</em>×</div><div class="lbl">Más rápido en<br>cargas a Tango</div></div>
+      <div class="hero-meta-item"><div class="num"><em>0</em></div><div class="lbl">Inversión inicial<br>en hardware</div></div>
+      <div class="hero-meta-item"><div class="num">24/<em>7</em></div><div class="lbl">Soporte técnico<br>incluido</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item">Estudios contables</div><div class="marquee-item">Estudios jurídicos</div><div class="marquee-item">PyMEs</div><div class="marquee-item">Inmobiliarias</div><div class="marquee-item">Consultoras</div><div class="marquee-item">Clínicas</div><div class="marquee-item">Distribuidoras</div>
+    <div class="marquee-item">Estudios contables</div><div class="marquee-item">Estudios jurídicos</div><div class="marquee-item">PyMEs</div><div class="marquee-item">Inmobiliarias</div><div class="marquee-item">Consultoras</div><div class="marquee-item">Clínicas</div><div class="marquee-item">Distribuidoras</div>
+  </div>
+</div>
+
+<section id="soluciones">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Soluciones — 01</span><h2 style="margin-top:18px">Hardware confiable.<br><em>Software que piensa.</em></h2></div>
+      <p>Te entregamos la impresora, los insumos, el mantenimiento y, cuando lo necesites, la capa de IA que convierte cada papel que pasa por tu oficina en información estructurada y trazable.</p>
+    </div>
+    <div class="solutions-grid">
+      <article class="sol-card feature span-7 reveal">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/><path d="M3 7l9-4 9 4"/><path d="M8 12h8M8 16h5"/></svg></div>
+        <span class="num">/ 01 — IA Documental</span>
+        <h3>Escaneo y búsqueda <em>inteligente</em> de facturas</h3>
+        <p>Pasás la factura por la impresora y listo. PrintOS lee, clasifica y carga automáticamente en Tango, Bejerman, Holistor, Xubio o el ERP que uses. Después la encontrás escribiendo lo que recordás: proveedor, mes, monto.</p>
+        <div class="visual">
+          <div class="row"><span><span class="pulse"></span>Escaneando factura_2189.pdf</span><span class="ok">→ procesada</span></div>
+          <div class="row"><span>CUIT detectado</span><span style="color:var(--ink)">30-71234567-8</span></div>
+          <div class="row"><span>Total con IVA</span><span style="color:var(--ink)">$ 184.500,00</span></div>
+          <div class="row"><span>Asiento contable</span><span class="ok">cargado en Tango ✓</span></div>
+        </div>
+        <div class="tags"><span class="tag">Tango</span><span class="tag">Bejerman</span><span class="tag">Xubio</span><span class="tag">Holistor</span><span class="tag">API propia</span></div>
+      </article>
+      <article class="sol-card span-5 reveal">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="6" rx="1"/><path d="M3 9h18v8H3z"/><rect x="6" y="14" width="12" height="7" rx="1"/><circle cx="17" cy="12" r="0.8" fill="currentColor"/></svg></div>
+        <span class="num">/ 02 — Hardware</span>
+        <h3>Alquiler de impresoras <em>multifunción</em></h3>
+        <p>Equipos color y blanco y negro, A4 y A3. Insumos, repuestos y service incluidos. Pagás solo por lo que imprimís. Si rompe, lo cambiamos.</p>
+        <div class="tags"><span class="tag">B&amp;N + Color</span><span class="tag">A4 / A3</span><span class="tag">Service incluido</span></div>
+      </article>
+      <article class="sol-card span-6 reveal">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 3 5-7"/></svg></div>
+        <span class="num">/ 03 — Analytics</span>
+        <h3>Panel de control <em>por usuario</em></h3>
+        <p>Quién imprime qué, cuánto cuesta, qué se desperdicia. Reportes mensuales listos para llevar a tu directorio.</p>
+        <div class="tags"><span class="tag">Costos por área</span><span class="tag">Auditoría</span></div>
+      </article>
+      <article class="sol-card span-6 reveal">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <span class="num">/ 04 — Confidencialidad</span>
+        <h3>Impresión <em>segura</em> por PIN</h3>
+        <p>El documento se imprime sólo cuando vos llegás al equipo y lo desbloqueás. Ideal para estudios jurídicos y áreas legales.</p>
+        <div class="tags"><span class="tag">PIN</span><span class="tag">Tarjeta RFID</span><span class="tag">App móvil</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="ai-feature" id="ia">
+  <div class="container">
+    <div class="ai-grid">
+      <div class="reveal">
+        <span class="eyebrow">IA documental — 02</span>
+        <h2 style="margin-top:18px">El asistente que <em>nunca</em><br>pierde una factura.</h2>
+        <p>Tus papeles entran por la impresora, salen como datos. Le preguntás a PrintOS en español, como si hablaras con un compañero, y te trae lo que necesitás.</p>
+        <ul class="ai-features-list">
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><div><b>OCR + IA contextual</b><span>Lee facturas A, B, C, recibos, tickets fiscales y notas de crédito.</span></div></li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><div><b>Carga automática en Tango y otros</b><span>Mapea cuentas, centros de costo y código de proveedor sin intervención.</span></div></li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><div><b>Búsqueda en lenguaje natural</b><span>“Mostrame lo que facturó Telecom en marzo arriba de 100 mil”.</span></div></li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><div><b>Validación contra AFIP</b><span>Chequea CAE, CUIT y domicilio fiscal en tiempo real.</span></div></li>
+          <li><svg class="check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><div><b>Datos en Argentina</b><span>Tus documentos no salen del país. Trazabilidad completa.</span></div></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="mockup">
+          <div class="mockup-head"><div class="mockup-dots"><span></span><span></span><span></span></div><div class="mockup-title">printos.app / búsqueda</div></div>
+          <div class="mockup-search">facturas de "edenor" del último trimestre&nbsp;<span class="cursor"></span></div>
+          <div style="color:var(--ink-dim);font-size:11px;margin:14px 0 8px;letter-spacing:0.08em;text-transform:uppercase">12 resultados · ordenados por fecha</div>
+          <div class="mockup-row"><span class="key">FAC-A 0001-00021847</span><span class="val">$ 184.500</span></div>
+          <div class="mockup-row"><span class="key">FAC-A 0001-00021903</span><span class="val">$ 192.300</span></div>
+          <div class="mockup-row"><span class="key">FAC-A 0001-00021971</span><span class="val">$ 198.700</span></div>
+          <div class="mockup-row"><span class="key" style="color:var(--accent)">→ Total Q1 2026</span><span class="val ok">$ 575.500</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="como">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Cómo funciona — 03</span><h2 style="margin-top:18px">De papel a dato,<br>en <em>cuatro pasos</em>.</h2></div>
+      <p>Todo el proceso está pensado para que tu equipo no tenga que aprender nada nuevo. La impresora es la misma de siempre. Lo que cambia es lo que pasa después.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-num"><span>PASO</span><span>01</span></div><h4>Te entregamos el <em>equipo</em></h4><p>Visitamos tu oficina, evaluamos tu volumen y dejamos instalado el equipo que mejor encaja. Sin costo de instalación.</p></div>
+      <div class="step reveal"><div class="step-num"><span>PASO</span><span>02</span></div><h4>Activás la <em>capa IA</em></h4><p>Conectamos la impresora a tu sistema contable y configuramos las reglas de tu estudio: cuentas, proveedores, alertas.</p></div>
+      <div class="step reveal"><div class="step-num"><span>PASO</span><span>03</span></div><h4>Escaneás <em>como siempre</em></h4><p>Tu equipo apoya las facturas, aprieta un botón y se va. PrintOS hace el resto en segundo plano.</p></div>
+      <div class="step reveal"><div class="step-num"><span>PASO</span><span>04</span></div><h4>Buscás y <em>encontrás</em></h4><p>Desde tu compu o el celular, encontrás cualquier comprobante en lenguaje natural. Sin abrir carpetas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="industrias">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Industrias — 04</span><h2 style="margin-top:18px">Soluciones <em>verticales</em>,<br>no genéricas.</h2></div>
+      <p>Cada rubro tiene su propio idioma. Diseñamos integraciones específicas para que PrintOS hable el de tu oficina.</p>
+    </div>
+    <div class="industries-list reveal">
+      <div class="industry"><div class="industry-num">/ 01</div><h3>Estudios <em>contables</em></h3><p>Carga automática en Tango, Bejerman y Holistor. Conciliación bancaria asistida y alertas de vencimientos AFIP.</p><div class="industry-cta">VER MÁS →</div></div>
+      <div class="industry"><div class="industry-num">/ 02</div><h3>Estudios <em>jurídicos</em></h3><p>Impresión segura por PIN, indexado de expedientes y búsqueda inteligente en escritos y dictámenes.</p><div class="industry-cta">VER MÁS →</div></div>
+      <div class="industry"><div class="industry-num">/ 03</div><h3>PyMEs y <em>distribuidoras</em></h3><p>Lectura de remitos y notas de pedido, control de stock contra documentos y auditoría de costos de impresión.</p><div class="industry-cta">VER MÁS →</div></div>
+      <div class="industry"><div class="industry-num">/ 04</div><h3>Clínicas y <em>consultorios</em></h3><p>Indexado de historias clínicas en papel, OCR de recetas y cumplimiento de confidencialidad por usuario.</p><div class="industry-cta">VER MÁS →</div></div>
+      <div class="industry"><div class="industry-num">/ 05</div><h3>Inmobiliarias y <em>consultoras</em></h3><p>Digitalización de contratos, búsqueda por cláusula y firma asistida con trazabilidad legal.</p><div class="industry-cta">VER MÁS →</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="planes">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="eyebrow">Planes — 05</span><h2 style="margin-top:18px">Una tarifa <em>clara</em>.<br>Sin sorpresas.</h2></div>
+      <p>Pagás un abono mensual que incluye equipo, insumos, mantenimiento y soporte. Las soluciones de IA se suman como módulos opcionales según lo que necesites.</p>
+    </div>
+    <div class="plans-grid">
+      <article class="plan reveal">
+        <h3>Esencial</h3>
+        <div class="plan-tag">Para equipos chicos</div>
+        <div class="plan-price"><span class="currency">$</span>69.900<span class="per">/mes</span></div>
+        <div class="plan-desc">Equipo multifunción A4, color, hasta 2.000 páginas mensuales incluidas.</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Impresora multifunción A4 color</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Insumos y service incluidos</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Soporte por mail y WhatsApp</li>
+          <li class="muted"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg> IA documental</li>
+          <li class="muted"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg> Carga automática a ERP</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ghost">Cotizar</a>
+      </article>
+      <article class="plan featured reveal">
+        <div class="plan-badge">Más elegido</div>
+        <h3>Profesional</h3>
+        <div class="plan-tag">Para estudios contables y jurídicos</div>
+        <div class="plan-price"><span class="currency">$</span>129.900<span class="per">/mes</span></div>
+        <div class="plan-desc">Todo lo del plan Esencial + IA documental con carga automática en tu sistema.</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Equipo A3/A4 color de alta gama</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Hasta 5.000 páginas mensuales</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> IA documental: OCR + búsqueda</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Carga automática en Tango / Bejerman</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Validación AFIP en tiempo real</li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary">Pedir demo</a>
+      </article>
+      <article class="plan reveal">
+        <h3>Empresa</h3>
+        <div class="plan-tag">Múltiples sucursales</div>
+        <div class="plan-price"><em style="font-style:italic;color:var(--ink-dim)">A medida</em></div>
+        <div class="plan-desc">Flota personalizada, integraciones a tu medida y SLA dedicado.</div>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Flota multi-sucursal centralizada</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Páginas ilimitadas</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Integraciones a medida (API)</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Account manager dedicado</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> SLA 4hs y soporte 24/7</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ghost">Hablemos</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="faq-grid">
+      <div class="reveal">
+        <span class="eyebrow">FAQ — 06</span>
+        <h2 class="display" style="font-size:clamp(36px,5vw,56px);margin-top:18px">Preguntas que <em>ya nos hicieron</em>.</h2>
+        <p style="color:var(--ink-dim);margin-top:24px;font-size:15px">Si la tuya no está acá, escribinos. Respondemos en menos de 24 horas hábiles.</p>
+      </div>
+      <div class="reveal">
+        <details class="faq" open>
+          <summary>¿Necesito comprar una impresora nueva?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>No. PrintOS es alquiler: te llevamos el equipo, lo instalamos y nos hacemos cargo de todo el ciclo de vida (insumos, repuestos, service). Vos sólo pagás un abono mensual y, si querés, le sumás la capa de IA.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Funciona con Tango Gestión?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Sí. Tenemos integración nativa con Tango (Gestión y Astor), Bejerman, Holistor y Xubio. Para otros sistemas usamos nuestra API o exportación por CSV/Excel pre-formateado.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Qué pasa con la confidencialidad de los documentos?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Todo el procesamiento se hace en infraestructura ubicada en Argentina, con cifrado en tránsito y en reposo. Cumplimos con la Ley 25.326 de Protección de Datos Personales y firmamos NDAs específicos cuando el cliente lo requiere.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Qué precisión tiene la lectura de facturas?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>En facturas A, B y C estándar superamos el 92% de extracción correcta sin intervención humana. Para los casos dudosos, PrintOS marca la factura para revisión rápida en lugar de cargar datos incorrectos.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Hay permanencia mínima?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>El contrato estándar es a 12 meses, pero ofrecemos también modalidad mes a mes con un pequeño recargo. Si te vas dentro del año, te llevamos el equipo sin penalidades raras.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="contacto">
+  <div class="container cta-final-inner">
+    <span class="eyebrow" style="color:#5C5847">Empezá hoy — 07</span>
+    <div class="giant" style="color:var(--ink-on-paper);margin-top:30px">Print<em>OS</em></div>
+    <h2>Pedí una <em>demo</em>.<br>En 30 minutos te mostramos todo.</h2>
+    <p>Te visitamos en tu oficina o coordinamos por videollamada. Sin compromiso, sin letra chica, y con un caso real cargado con tus datos.</p>
+
+    <!-- ===== FORMULARIO DE CONTACTO ===== -->
+    <!-- IMPORTANTE: reemplazá YOUR_ACCESS_KEY_HERE por tu key gratis de https://web3forms.com -->
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+      <input type="hidden" name="access_key" value="24d9ffc6-6ebe-4e1c-8fbb-fb987a3f287a">
+      <input type="hidden" name="subject" value="Nueva consulta desde PrintOS">
+      <input type="hidden" name="from_name" value="Web PrintOS">
+      <input type="checkbox" name="botcheck" style="display:none;">
+
+      <div class="row-2">
+        <div class="field"><label for="nombre">Nombre y apellido</label><input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez"></div>
+        <div class="field"><label for="empresa">Empresa o estudio</label><input type="text" id="empresa" name="empresa" placeholder="Estudio Pérez & Asoc."></div>
+      </div>
+      <div class="row-2">
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="juan@empresa.com.ar"></div>
+        <div class="field"><label for="telefono">Teléfono / WhatsApp</label><input type="tel" id="telefono" name="telefono" placeholder="+54 11 1234-5678"></div>
+      </div>
+      <div class="field">
+        <label for="rubro">Rubro</label>
+        <select id="rubro" name="rubro">
+          <option>Estudio contable</option><option>Estudio jurídico</option><option>PyME / Distribuidora</option><option>Clínica / Consultorio</option><option>Inmobiliaria / Consultora</option><option>Otro</option>
+        </select>
+      </div>
+      <div class="field"><label for="mensaje">Contanos qué necesitás</label><textarea id="mensaje" name="mensaje" placeholder="Cuántos equipos necesitás, qué sistema usan, etc."></textarea></div>
+      <button type="submit" class="btn btn-primary">Enviar consulta
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+      <div class="form-msg" id="form-msg"></div>
+    </form>
+
+    <div style="margin-top:60px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5C5847;letter-spacing:0.15em;text-transform:uppercase">CABA · Buenos Aires · Córdoba · Rosario</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand"><div class="brand-mark">P</div><span class="brand-name">Print<span>OS</span></span></a>
+        <p>Impresión inteligente para empresas que prefieren pensar en su negocio antes que en el papel.</p>
+      </div>
+      <div class="footer-col"><h5>Producto</h5><ul><li><a href="#soluciones">Soluciones</a></li><li><a href="#ia">IA documental</a></li><li><a href="#planes">Planes</a></li><li><a href="#como">Cómo funciona</a></li></ul></div>
+      <div class="footer-col"><h5>Industrias</h5><ul><li><a href="#industrias">Estudios contables</a></li><li><a href="#industrias">Estudios jurídicos</a></li><li><a href="#industrias">PyMEs</a></li><li><a href="#industrias">Clínicas</a></li></ul></div>
+      <div class="footer-col"><h5>Empresa</h5><ul><li><a href="#contacto">Contacto</a></li><li><a href="#">Soporte</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Términos</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="mono">© 2026 PrintOS · Hecho con cuidado en Argentina</span><span class="mono">v 2.4.1 — sistema operativo</span></div>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  const form = document.getElementById('contact-form');
+  const msg = document.getElementById('form-msg');
+  if(form){
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      msg.textContent = 'Enviando...';
+      msg.style.color = '#5C5847';
+      const data = new FormData(form);
+      try{
+        const res = await fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
+        if(res.ok){
+          msg.textContent = '✓ ¡Gracias! Te contactamos en menos de 24hs.';
+          msg.style.color = '#3F4A1B';
+          form.reset();
+        } else {
+          msg.textContent = 'Hubo un error. Probá escribirnos a hola@printos.com.ar';
+          msg.style.color = '#a33';
+        }
+      } catch(err){
+        msg.textContent = 'Hubo un error. Probá escribirnos a hola@printos.com.ar';
+        msg.style.color = '#a33';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
