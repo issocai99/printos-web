@@ -4,18 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>PrintOS — Impresión inteligente para empresas</title>
-<meta name="description" content="Alquiler de impresoras profesionales con soluciones de IA: escaneo, búsqueda inteligente y carga automática de facturas en Tango y otros sistemas. Para estudios contables, jurídicos y PyMEs en Argentina." />
-<meta name="theme-color" content="#0F6B4F" />
+<title>PrintOS — Alquiler de impresoras y fotocopiadoras para empresas</title>
+<meta name="description" content="Alquiler y venta de impresoras Ricoh, HP, Brother y Lexmark. Service técnico, insumos originales y soluciones con IA. Sin inversión inicial, soporte AMBA." />
+<meta name="theme-color" content="#0A0A0B" />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="PrintOS — Impresión inteligente para empresas" />
-<meta property="og:description" content="Alquiler de impresoras + IA para escaneo y carga automática de facturas. Pensado para estudios contables, jurídicos y PyMEs." />
+<meta property="og:description" content="Alquiler de impresoras Ricoh, HP, Brother y Lexmark. Sin inversión inicial. Insumos, service y soluciones con IA." />
 <meta property="og:locale" content="es_AR" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<!-- Favicon: ícono de la laptop con WiFi en SVG -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F6B4F'/%3E%3Crect x='8' y='12' width='14' height='9' rx='1.2' fill='none' stroke='white' stroke-width='1.5'/%3E%3Cpath d='M6 22h20l-1 2H7z' fill='none' stroke='white' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M11 17l1.5-2 2 2 2-2.5 2 2' fill='none' stroke='%237DD8B0' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='19' cy='13.5' r='1' fill='%237DD8B0'/%3E%3Cpath d='M21.5 10.5q1 .5 1 1.5M23 9q1.5 1 1.5 3' fill='none' stroke='%237DD8B0' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2322D3EE'/%3E%3Crect x='8' y='12' width='14' height='9' rx='1.2' fill='none' stroke='%230A0A0B' stroke-width='1.5'/%3E%3Cpath d='M6 22h20l-1 2H7z' fill='none' stroke='%230A0A0B' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M11 17l1.5-2 2 2 2-2.5 2 2' fill='none' stroke='%230A0A0B' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='19' cy='13.5' r='1' fill='%230A0A0B'/%3E%3Cpath d='M21.5 10.5q1 .5 1 1.5M23 9q1.5 1 1.5 3' fill='none' stroke='%230A0A0B' stroke-width='1' stroke-linecap='round'/%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,32 +22,34 @@
 
 <style>
   :root{
-    /* Paleta corporativa de PrintOS */
-    --green-900:#063D2C;     /* verde más oscuro */
-    --green-800:#0A5239;     /* texto sobre claro */
-    --green-700:#0F6B4F;     /* verde principal */
-    --green-600:#147F5E;     /* hover */
-    --green-500:#1A9970;     /* secundario */
-    --green-400:#3FB48C;     /* claro */
-    --green-300:#7DD8B0;     /* menta accent */
-    --green-200:#B4ECD2;     /* fondo suave */
-    --green-100:#E2F5EC;     /* fondo muy suave */
-    --green-50:#F1FAF5;      /* fondo casi blanco */
+    /* Paleta Negro + Cyan */
+    --bg:#0A0A0B;
+    --bg-2:#111113;
+    --bg-3:#18181B;
+    --bg-4:#1F1F22;
+    --line:#27272A;
+    --line-2:#3F3F46;
+    --ink:#FAFAFA;
+    --ink-2:#E4E4E7;
+    --ink-3:#A1A1AA;
+    --ink-4:#71717A;
+    --ink-5:#52525B;
 
-    --bg:#FFFFFF;
-    --bg-soft:#F7FAF8;
-    --ink:#0A1F18;
-    --ink-2:#1F362C;
-    --ink-3:#4A5F55;
-    --ink-4:#7A8C84;
-    --line:#E6EDE9;
-    --line-2:#D4DFD9;
+    --cyan-400:#22D3EE;
+    --cyan-500:#06B6D4;
+    --cyan-600:#0891B2;
+    --cyan-300:#67E8F9;
+    --cyan-200:#A5F3FC;
+    --cyan-100:#CFFAFE;
+    --cyan-soft:rgba(34,211,238,0.12);
+    --cyan-glow:rgba(34,211,238,0.4);
+
     --radius:14px;
     --radius-lg:22px;
     --maxw:1200px;
-    --shadow-sm:0 1px 2px rgba(15,107,79,0.04),0 2px 8px rgba(15,107,79,0.04);
-    --shadow:0 8px 24px -8px rgba(15,107,79,0.12),0 2px 6px rgba(15,107,79,0.06);
-    --shadow-lg:0 30px 60px -20px rgba(15,107,79,0.18),0 8px 20px rgba(15,107,79,0.08);
+    --shadow:0 8px 24px -8px rgba(0,0,0,0.5),0 2px 6px rgba(0,0,0,0.3);
+    --shadow-lg:0 30px 60px -20px rgba(0,0,0,0.7),0 8px 20px rgba(0,0,0,0.4);
+    --glow:0 0 0 1px rgba(34,211,238,0.3),0 8px 32px -8px rgba(34,211,238,0.4);
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
@@ -61,55 +62,48 @@
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
+  ::selection{background:var(--cyan-400);color:var(--bg)}
 
   .container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  section{padding:110px 0;position:relative}
-  @media(max-width:720px){section{padding:72px 0}}
+  section{padding:100px 0;position:relative}
+  @media(max-width:720px){section{padding:64px 0}}
 
-  /* ===== Tipografía ===== */
   h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;line-height:1.05;color:var(--ink)}
-  .display{
-    font-size:clamp(44px,6.4vw,84px);
-    font-weight:800;
-    letter-spacing:-0.035em;
-    line-height:1;
-  }
-  .display .mark{color:var(--green-700)}
-  .h2{font-size:clamp(34px,4.5vw,54px);font-weight:700;letter-spacing:-0.025em}
-  .h2 .mark{color:var(--green-700)}
-  .lead{font-size:18px;color:var(--ink-3);max-width:60ch}
+  .display{font-size:clamp(40px,6.2vw,76px);font-weight:800;letter-spacing:-0.035em;line-height:1.02}
+  .display .mark{color:var(--cyan-400)}
+  .h2{font-size:clamp(32px,4.2vw,52px);font-weight:700;letter-spacing:-0.025em}
+  .h2 .mark{color:var(--cyan-400)}
+  .lead{font-size:18px;color:var(--ink-3);max-width:60ch;line-height:1.6}
   .mono{font-family:'JetBrains Mono',monospace}
 
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
     font-family:'JetBrains Mono',monospace;
     font-size:12px;font-weight:500;
-    color:var(--green-700);
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    background:var(--green-100);
-    padding:6px 12px;
-    border-radius:999px;
+    color:var(--cyan-400);
+    letter-spacing:0.06em;text-transform:uppercase;
+    background:var(--cyan-soft);
+    border:1px solid rgba(34,211,238,0.2);
+    padding:6px 12px;border-radius:999px;
   }
-  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--green-500);box-shadow:0 0 0 3px var(--green-200)}
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan-400);box-shadow:0 0 0 3px rgba(34,211,238,0.25)}
 
   /* ===== Botones ===== */
   .btn{
     display:inline-flex;align-items:center;gap:8px;
-    padding:13px 22px;
-    border-radius:999px;
+    padding:13px 22px;border-radius:999px;
     font-size:15px;font-weight:600;
     text-decoration:none;cursor:pointer;
     transition:all .25s ease;
     border:1px solid transparent;
     font-family:inherit;
   }
-  .btn-primary{background:var(--green-700);color:white}
-  .btn-primary:hover{background:var(--green-800);transform:translateY(-1px);box-shadow:0 12px 24px -10px rgba(15,107,79,0.5)}
-  .btn-ghost{border-color:var(--line-2);color:var(--ink);background:white}
-  .btn-ghost:hover{border-color:var(--green-700);color:var(--green-700)}
-  .btn-dark{background:var(--ink);color:white}
-  .btn-dark:hover{background:var(--green-800)}
+  .btn-primary{background:var(--cyan-400);color:var(--bg)}
+  .btn-primary:hover{background:var(--cyan-300);transform:translateY(-1px);box-shadow:0 12px 32px -10px var(--cyan-glow)}
+  .btn-ghost{border-color:var(--line-2);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--cyan-400);color:var(--cyan-400);background:var(--cyan-soft)}
+  .btn-light{background:var(--ink);color:var(--bg)}
+  .btn-light:hover{background:var(--cyan-400)}
   .btn-arrow{transition:transform .25s}
   .btn:hover .btn-arrow{transform:translateX(3px)}
 
@@ -117,7 +111,7 @@
   nav.top{
     position:fixed;top:0;left:0;right:0;z-index:100;
     backdrop-filter:blur(14px);
-    background:rgba(255,255,255,0.82);
+    background:rgba(10,10,11,0.75);
     border-bottom:1px solid var(--line);
   }
   nav.top .inner{
@@ -128,26 +122,25 @@
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
   .brand-mark{
     width:38px;height:38px;
-    background:var(--green-700);
+    background:var(--cyan-400);
     border-radius:9px;
     display:grid;place-items:center;
-    box-shadow:0 4px 12px -2px rgba(15,107,79,0.4);
+    box-shadow:0 4px 16px -2px var(--cyan-glow);
   }
   .brand-name{font-size:21px;font-weight:800;letter-spacing:-0.025em}
-  .brand-name span{color:var(--green-700)}
-
-  .nav-links{display:flex;gap:30px;align-items:center}
+  .brand-name span{color:var(--cyan-400)}
+  .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{color:var(--ink-3);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
   .nav-links a:hover{color:var(--ink)}
   @media(max-width:880px){.nav-links a:not(.btn){display:none}}
 
   /* ===== HERO ===== */
   .hero{
-    padding-top:140px;padding-bottom:70px;
+    padding-top:130px;padding-bottom:80px;
     position:relative;overflow:hidden;
     background:
-      radial-gradient(ellipse 80% 50% at 50% 0%,var(--green-100) 0%,transparent 50%),
-      linear-gradient(180deg,var(--bg) 0%,var(--bg-soft) 100%);
+      radial-gradient(ellipse 70% 60% at 50% 0%,rgba(34,211,238,0.1) 0%,transparent 60%),
+      var(--bg);
   }
   .hero-grid-bg{
     position:absolute;inset:0;
@@ -155,598 +148,722 @@
       linear-gradient(var(--line) 1px,transparent 1px),
       linear-gradient(90deg,var(--line) 1px,transparent 1px);
     background-size:64px 64px;
-    mask-image:radial-gradient(ellipse 60% 60% at 50% 30%,#000 20%,transparent 70%);
-    -webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 30%,#000 20%,transparent 70%);
+    mask-image:radial-gradient(ellipse 60% 60% at 30% 30%,#000 20%,transparent 70%);
+    -webkit-mask-image:radial-gradient(ellipse 60% 60% at 30% 30%,#000 20%,transparent 70%);
     opacity:0.4;pointer-events:none;
   }
-  .hero-inner{position:relative;z-index:1;text-align:center}
-  .hero h1{margin:24px auto 24px;max-width:18ch;animation:fadeUp 1s .15s both}
-  .hero .lead{margin:0 auto 36px;animation:fadeUp 1s .3s both;font-size:19px}
+  .hero-grid{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1.15fr 1fr;gap:60px;
+    align-items:center;
+  }
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:48px}}
+  .hero h1{margin:22px 0 22px;animation:fadeUp 1s .15s both}
+  .hero .lead{margin-bottom:32px;animation:fadeUp 1s .3s both;font-size:18px}
   .hero .eyebrow{animation:fadeUp 1s .05s both}
-  .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp 1s .45s both}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp 1s .45s both}
 
-  .hero-meta{
-    margin-top:80px;
-    display:grid;grid-template-columns:repeat(4,1fr);
-    gap:0;
-    border:1px solid var(--line);
+  /* hero photo */
+  .hero-photo-wrap{
+    position:relative;
+    animation:fadeUp 1s .35s both;
+  }
+  .hero-photo{
     border-radius:var(--radius-lg);
-    background:white;
-    box-shadow:var(--shadow);
     overflow:hidden;
-    animation:fadeUp 1s .6s both;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow-lg);
+    aspect-ratio:4/3;
+    background:#222;
+    position:relative;
   }
-  @media(max-width:720px){.hero-meta{grid-template-columns:repeat(2,1fr)}}
-  .hero-meta-item{
-    padding:24px 20px;
-    border-right:1px solid var(--line);
-    text-align:left;
+  .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 30%,rgba(10,10,11,0.4) 100%);
+    pointer-events:none;
   }
-  .hero-meta-item:last-child{border-right:none}
-  @media(max-width:720px){
-    .hero-meta-item:nth-child(2){border-right:none}
-    .hero-meta-item:nth-child(1),.hero-meta-item:nth-child(2){border-bottom:1px solid var(--line)}
+  .hero-photo-glow{
+    position:absolute;
+    top:-30px;left:-30px;
+    width:140px;height:140px;
+    background:var(--cyan-400);
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:0.25;
+    z-index:-1;
   }
-  .hero-meta-item .num{
-    font-size:38px;font-weight:800;letter-spacing:-0.03em;line-height:1;
-    color:var(--green-700);
+
+  /* badge sobre la foto */
+  .photo-badge{
+    position:absolute;bottom:20px;left:20px;
+    background:rgba(10,10,11,0.85);
+    backdrop-filter:blur(10px);
+    border:1px solid var(--line-2);
+    border-radius:14px;
+    padding:14px 18px;
+    display:flex;align-items:center;gap:14px;
+    z-index:1;
   }
-  .hero-meta-item .lbl{
-    font-size:13px;color:var(--ink-3);margin-top:6px;
-    line-height:1.3;
+  .photo-badge-icon{
+    width:40px;height:40px;
+    background:var(--cyan-soft);
+    color:var(--cyan-400);
+    border-radius:10px;
+    display:grid;place-items:center;
+    flex-shrink:0;
   }
+  .photo-badge strong{display:block;font-size:14px;color:var(--ink);font-weight:600}
+  .photo-badge span{display:block;font-size:12px;color:var(--ink-3);margin-top:2px}
 
   @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
-  /* ===== Marquee de logos / industrias ===== */
-  .marquee{
+  /* ===== Stats inline ===== */
+  .hero-stats{
+    margin-top:80px;
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:0;
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
-    padding:22px 0;
-    overflow:hidden;
-    background:white;
+    animation:fadeUp 1s .6s both;
   }
-  .marquee-label{
+  @media(max-width:720px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+  .hero-stat{
+    padding:24px 20px;
+    border-right:1px solid var(--line);
+  }
+  .hero-stat:last-child{border-right:none}
+  @media(max-width:720px){
+    .hero-stat:nth-child(2){border-right:none}
+    .hero-stat:nth-child(1),.hero-stat:nth-child(2){border-bottom:1px solid var(--line)}
+  }
+  .hero-stat .num{font-size:36px;font-weight:800;letter-spacing:-0.03em;line-height:1;color:var(--cyan-400)}
+  .hero-stat .lbl{font-size:13px;color:var(--ink-3);margin-top:6px;line-height:1.3}
+
+  /* ===== Marcas ===== */
+  .brands-bar{
+    background:var(--bg-2);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:36px 0;
+  }
+  .brands-label{
     text-align:center;
-    font-size:12px;
-    color:var(--ink-4);
-    text-transform:uppercase;
-    letter-spacing:0.15em;
-    margin-bottom:18px;
-    font-weight:500;
+    font-size:12px;color:var(--ink-4);
+    text-transform:uppercase;letter-spacing:0.15em;
+    margin-bottom:24px;font-weight:500;
   }
-  .marquee-track{display:flex;gap:60px;animation:slide 30s linear infinite;white-space:nowrap}
-  .marquee-item{
-    font-size:18px;color:var(--ink-3);font-weight:600;
-    display:flex;align-items:center;gap:60px;flex-shrink:0;
+  .brands-grid{
+    display:flex;justify-content:center;align-items:center;
+    gap:48px;flex-wrap:wrap;
+  }
+  .brand-logo{
+    font-weight:800;font-size:22px;
+    color:var(--ink-3);
     letter-spacing:-0.01em;
+    transition:color .25s;
+    padding:8px 0;position:relative;
   }
-  .marquee-item::after{
-    content:"";width:8px;height:8px;border-radius:50%;
-    background:var(--green-300);
+  .brand-logo:hover{color:var(--cyan-400)}
+  .brand-logo.featured{color:var(--cyan-400);font-size:26px}
+  .brand-logo.featured::after{
+    content:"OFICIAL";
+    position:absolute;
+    top:-8px;right:-44px;
+    background:var(--cyan-400);
+    color:var(--bg);
+    font-size:9px;
+    padding:2px 7px;
+    border-radius:999px;
+    letter-spacing:0.1em;
+    font-weight:700;
   }
-  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* ===== Section heads ===== */
-  .section-head{text-align:center;max-width:680px;margin:0 auto 60px}
+  .section-head{text-align:center;max-width:680px;margin:0 auto 56px}
   .section-head .h2{margin-top:18px}
   .section-head .lead{margin:18px auto 0}
 
-  .section-head.left{text-align:left;margin:0 0 60px}
-  .section-head.left .lead{margin-left:0;margin-right:0}
+  /* ===== Beneficios ===== */
+  .benefits{background:var(--bg)}
+  .benefits-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:18px;
+  }
+  @media(max-width:1000px){.benefits-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.benefits-grid{grid-template-columns:1fr}}
+  .benefit{
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    padding:28px;
+    transition:transform .3s,border-color .3s,box-shadow .3s;
+    position:relative;
+  }
+  .benefit:hover{transform:translateY(-3px);border-color:var(--cyan-500);box-shadow:var(--shadow)}
+  .benefit-icon{
+    width:48px;height:48px;
+    background:var(--cyan-soft);
+    border:1px solid rgba(34,211,238,0.2);
+    border-radius:13px;
+    display:grid;place-items:center;
+    color:var(--cyan-400);
+    margin-bottom:18px;
+  }
+  .benefit h4{font-size:17px;font-weight:700;margin-bottom:8px;line-height:1.25;color:var(--ink)}
+  .benefit p{font-size:14px;color:var(--ink-3);line-height:1.55}
 
-  /* ===== SOLUCIONES ===== */
-  .solutions-grid{
+  /* ===== Servicios ===== */
+  .services{background:var(--bg-2)}
+  .services-grid{
     display:grid;grid-template-columns:repeat(12,1fr);
     gap:18px;
   }
-  .sol-card{
-    background:white;
+  .service-card{
+    background:var(--bg);
     border:1px solid var(--line);
     border-radius:var(--radius-lg);
-    padding:32px;
+    padding:36px;
     position:relative;overflow:hidden;
     transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
     display:flex;flex-direction:column;
   }
-  .sol-card:hover{transform:translateY(-3px);border-color:var(--green-300);box-shadow:var(--shadow)}
-  .sol-card.span-7{grid-column:span 7}
-  .sol-card.span-5{grid-column:span 5}
-  .sol-card.span-6{grid-column:span 6}
-  @media(max-width:880px){.sol-card.span-7,.sol-card.span-5,.sol-card.span-6{grid-column:span 12}}
-
-  .sol-card .icon-wrap{
-    width:52px;height:52px;
-    background:var(--green-100);
-    border-radius:13px;
-    display:grid;place-items:center;
-    color:var(--green-700);
-    margin-bottom:24px;
-  }
-  .sol-card .num{
-    font-family:'JetBrains Mono',monospace;
-    font-size:11px;color:var(--ink-4);
-    letter-spacing:0.1em;font-weight:500;
-  }
-  .sol-card h3{
-    font-size:26px;font-weight:700;letter-spacing:-0.02em;
-    margin-top:6px;line-height:1.15;
-  }
-  .sol-card p{color:var(--ink-3);margin-top:12px;font-size:15px;max-width:46ch;flex:1}
-  .sol-card .tags{margin-top:24px;display:flex;flex-wrap:wrap;gap:6px}
-  .tag{
-    font-size:12px;font-weight:500;
-    padding:5px 11px;
-    background:var(--green-50);
-    color:var(--green-800);
-    border-radius:999px;
-    border:1px solid var(--green-100);
-  }
-
-  /* tarjeta destacada con visual */
-  .sol-card.feature{
-    background:linear-gradient(135deg,#0F6B4F 0%,#0A5239 100%);
-    border:none;color:white;
-    grid-column:span 12;
-    padding:0;overflow:hidden;
-  }
-  .sol-card.feature:hover{transform:translateY(-3px);box-shadow:0 30px 60px -20px rgba(15,107,79,0.4)}
-  .feature-grid{
-    display:grid;grid-template-columns:1fr 1fr;
-    gap:0;
-  }
-  @media(max-width:880px){.feature-grid{grid-template-columns:1fr}}
-  .feature-text{padding:48px;display:flex;flex-direction:column;justify-content:center}
-  .feature-text .icon-wrap{background:rgba(125,216,176,0.15);color:var(--green-300)}
-  .feature-text .num{color:var(--green-300)}
-  .feature-text h3{color:white;font-size:34px;margin-top:6px}
-  .feature-text p{color:rgba(255,255,255,0.75)}
-  .feature-text .tag{background:rgba(255,255,255,0.08);color:var(--green-300);border:1px solid rgba(125,216,176,0.2)}
-  .feature-visual{
-    background:rgba(255,255,255,0.04);
-    border-left:1px solid rgba(255,255,255,0.08);
-    padding:48px 36px;
-    display:flex;align-items:center;
-  }
-  @media(max-width:880px){.feature-visual{border-left:none;border-top:1px solid rgba(255,255,255,0.08);padding:36px 28px}}
-
-  .scan-card{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.1);
+  .service-card:hover{transform:translateY(-3px);border-color:var(--cyan-500);box-shadow:var(--shadow)}
+  .service-card.span-7{grid-column:span 7}
+  .service-card.span-5{grid-column:span 5}
+  .service-card.span-6{grid-column:span 6}
+  @media(max-width:880px){.service-card.span-7,.service-card.span-5,.service-card.span-6{grid-column:span 12}}
+  .service-card .num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-4);letter-spacing:0.1em;font-weight:500;margin-bottom:8px}
+  .service-card .icon-wrap{
+    width:54px;height:54px;
+    background:var(--cyan-soft);
+    border:1px solid rgba(34,211,238,0.2);
     border-radius:14px;
-    padding:18px;
-    width:100%;
-    backdrop-filter:blur(8px);
-  }
-  .scan-row{
-    display:flex;justify-content:space-between;align-items:center;
-    padding:9px 0;
-    border-bottom:1px dashed rgba(255,255,255,0.1);
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;
-    color:rgba(255,255,255,0.6);
-  }
-  .scan-row:last-child{border-bottom:none}
-  .scan-row .val{color:white}
-  .scan-row .ok{color:var(--green-300)}
-  .pulse{
-    width:7px;height:7px;border-radius:50%;
-    background:var(--green-300);display:inline-block;
-    margin-right:8px;
-    animation:pulse 2s infinite;
-  }
-  @keyframes pulse{
-    0%,100%{box-shadow:0 0 0 0 rgba(125,216,176,0.7)}
-    50%{box-shadow:0 0 0 8px rgba(125,216,176,0)}
-  }
-
-  /* ===== CÓMO FUNCIONA ===== */
-  .how{background:var(--bg-soft)}
-  .steps{
-    display:grid;grid-template-columns:repeat(4,1fr);
-    gap:18px;
-  }
-  @media(max-width:880px){.steps{grid-template-columns:1fr 1fr;gap:14px}}
-  @media(max-width:560px){.steps{grid-template-columns:1fr}}
-  .step{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:var(--radius-lg);
-    padding:28px 24px;
-    position:relative;
-    transition:transform .3s,border-color .3s;
-  }
-  .step:hover{transform:translateY(-2px);border-color:var(--green-300)}
-  .step .step-num{
-    width:36px;height:36px;
-    background:var(--green-100);
-    color:var(--green-700);
-    border-radius:50%;
     display:grid;place-items:center;
-    font-weight:700;font-size:14px;
-    margin-bottom:18px;
+    color:var(--cyan-400);
+    margin-bottom:22px;
   }
-  .step h4{font-size:18px;font-weight:700;margin-bottom:8px}
-  .step p{font-size:14px;color:var(--ink-3);line-height:1.5}
-
-  /* ===== INDUSTRIAS ===== */
-  .industries-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    gap:14px;
-  }
-  @media(max-width:880px){.industries-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:560px){.industries-grid{grid-template-columns:1fr}}
-  .industry-card{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:var(--radius-lg);
-    padding:28px;
-    transition:all .3s ease;
-    position:relative;overflow:hidden;
-    cursor:pointer;
-  }
-  .industry-card::before{
-    content:"";position:absolute;
-    inset:0;
-    background:linear-gradient(135deg,var(--green-50) 0%,transparent 50%);
-    opacity:0;transition:opacity .3s;
-  }
-  .industry-card:hover{border-color:var(--green-400);transform:translateY(-2px);box-shadow:var(--shadow)}
-  .industry-card:hover::before{opacity:1}
-  .industry-card>*{position:relative}
-  .industry-icon{
-    width:44px;height:44px;
-    background:var(--green-100);
-    border-radius:11px;
-    display:grid;place-items:center;
-    color:var(--green-700);
-    margin-bottom:18px;
-  }
-  .industry-card h3{font-size:19px;font-weight:700;margin-bottom:6px}
-  .industry-card p{font-size:14px;color:var(--ink-3)}
-  .industry-card .arrow{
-    margin-top:18px;
-    color:var(--green-700);
-    font-size:13px;font-weight:600;
-    display:flex;align-items:center;gap:6px;
+  .service-card h3{font-size:26px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:10px;color:var(--ink)}
+  .service-card p{color:var(--ink-3);font-size:15px;line-height:1.6;flex:1}
+  .service-card .service-cta{
+    margin-top:24px;
+    display:flex;align-items:center;gap:8px;
+    color:var(--cyan-400);
+    font-weight:600;font-size:14px;
+    text-decoration:none;
     transition:gap .25s;
   }
-  .industry-card:hover .arrow{gap:10px}
+  .service-card:hover .service-cta{gap:12px}
 
-  /* ===== IA destacado ===== */
-  .ai-feature{background:white}
-  .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  /* card destacada (alquiler) */
+  .service-card.featured{
+    background:linear-gradient(135deg,#0F172A 0%,#020617 100%);
+    border:1px solid var(--cyan-500);
+    box-shadow:var(--glow);
+  }
+  .service-card.featured::before{
+    content:"";position:absolute;
+    top:-50%;right:-30%;
+    width:80%;height:200%;
+    background:radial-gradient(ellipse,rgba(34,211,238,0.15) 0%,transparent 60%);
+    pointer-events:none;
+  }
+  .service-card.featured h3{font-size:30px}
+  .service-card.featured *{position:relative}
+
+  /* card insumos */
+  .service-card.shop{
+    background:linear-gradient(135deg,#FFE600 0%,#FFCD00 100%);
+    color:#1A1A2E;
+    border:none;
+  }
+  .service-card.shop *{color:#1A1A2E!important}
+  .service-card.shop .num{color:rgba(26,26,46,0.7)!important}
+  .service-card.shop .icon-wrap{background:rgba(26,26,46,0.12);border-color:rgba(26,26,46,0.15);color:#1A1A2E!important}
+  .service-card.shop p{color:rgba(26,26,46,0.85)!important}
+  .service-card.shop .ml-badge{
+    display:inline-flex;align-items:center;gap:6px;
+    background:#1A1A2E;color:#FFE600!important;
+    padding:5px 11px;border-radius:999px;
+    font-size:11px;font-weight:700;
+    margin-bottom:12px;width:fit-content;
+    letter-spacing:0.05em;
+  }
+  .service-card.shop .ml-badge *{color:#FFE600!important}
+
+  /* ===== Catálogo ===== */
+  .catalog{background:var(--bg)}
+  .catalog-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  @media(max-width:880px){.catalog-grid{grid-template-columns:1fr}}
+  .catalog-card{
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    transition:transform .3s,box-shadow .3s,border-color .3s;
+    display:flex;flex-direction:column;
+  }
+  .catalog-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--cyan-500)}
+  .catalog-img{
+    aspect-ratio:4/3;
+    background:linear-gradient(135deg,var(--bg-3) 0%,var(--bg-4) 100%);
+    display:grid;place-items:center;
+    border-bottom:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  .catalog-img img{width:100%;height:100%;object-fit:cover}
+  .catalog-img svg{width:60%;height:auto;color:var(--cyan-400);opacity:0.85}
+  .catalog-tag{
+    position:absolute;top:14px;left:14px;
+    background:rgba(10,10,11,0.85);
+    backdrop-filter:blur(8px);
+    border:1px solid var(--line-2);
+    padding:5px 11px;border-radius:999px;
+    font-size:11px;font-weight:700;
+    color:var(--cyan-400);
+    letter-spacing:0.04em;
+    z-index:1;
+  }
+  .catalog-info{padding:24px}
+  .catalog-info .brand{font-size:11px;color:var(--ink-4);text-transform:uppercase;letter-spacing:0.1em;font-weight:600}
+  .catalog-info h4{font-size:19px;font-weight:700;margin:4px 0 12px;color:var(--ink)}
+  .catalog-features{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:6px}
+  .catalog-features li{font-size:13.5px;color:var(--ink-3);display:flex;gap:8px;align-items:center}
+  .catalog-features li svg{color:var(--cyan-400);flex-shrink:0}
+  .catalog-cta{
+    border-top:1px solid var(--line);
+    padding-top:16px;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .catalog-cta .ideal{font-size:12px;color:var(--ink-4)}
+  .catalog-cta a{color:var(--cyan-400);font-weight:600;font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px;transition:gap .25s}
+  .catalog-cta a:hover{gap:9px}
+
+  /* ===== Tienda Mercado Shop ===== */
+  .shop-banner{
+    background:linear-gradient(135deg,#FFE600 0%,#FFCD00 100%);
+    position:relative;overflow:hidden;
+  }
+  .shop-banner::before{
+    content:"";position:absolute;
+    top:-50%;left:-10%;
+    width:60%;height:200%;
+    background:radial-gradient(ellipse,rgba(255,255,255,0.4) 0%,transparent 60%);
+    pointer-events:none;
+  }
+  .shop-grid{
+    display:grid;grid-template-columns:1.2fr 1fr;
+    gap:60px;align-items:center;
+    position:relative;z-index:1;
+  }
+  @media(max-width:880px){.shop-grid{grid-template-columns:1fr;gap:40px}}
+  .shop-text .ml-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#1A1A2E;color:#FFE600;
+    padding:8px 14px;border-radius:999px;
+    font-size:12px;font-weight:700;letter-spacing:0.06em;
+    margin-bottom:20px;
+  }
+  .shop-text h2{
+    color:#1A1A2E;
+    font-size:clamp(36px,5vw,58px);
+    font-weight:800;letter-spacing:-0.03em;line-height:1.05;
+  }
+  .shop-text p{color:rgba(26,26,46,0.85);font-size:18px;margin:20px 0 32px;max-width:48ch}
+  .shop-features{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:14px;margin-bottom:32px;
+  }
+  @media(max-width:560px){.shop-features{grid-template-columns:1fr}}
+  .shop-feature{
+    display:flex;gap:10px;align-items:flex-start;
+    font-size:14px;color:rgba(26,26,46,0.9);font-weight:500;
+  }
+  .shop-feature svg{color:#1A1A2E;flex-shrink:0;margin-top:2px}
+  .btn-shop{background:#1A1A2E;color:#FFE600!important}
+  .btn-shop:hover{background:#2D2D52;transform:translateY(-1px)}
+
+  .shop-visual{
+    background:white;
+    border-radius:24px;padding:32px;
+    box-shadow:0 30px 60px -15px rgba(26,26,46,0.3);
+  }
+  .shop-visual-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-bottom:18px;border-bottom:1px solid #E6EDE9;margin-bottom:18px;
+  }
+  .shop-visual-head .ml-logo{font-weight:900;font-size:18px;color:#1A1A2E;letter-spacing:-0.02em}
+  .shop-visual-head .ml-logo span{color:#FFE600;background:#1A1A2E;padding:2px 6px;border-radius:4px}
+  .shop-products{display:flex;flex-direction:column;gap:12px}
+  .shop-product{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:12px;background:#F7FAF8;border-radius:10px;
+    transition:background .25s;
+  }
+  .shop-product:hover{background:#EBF5F1}
+  .shop-product-info{display:flex;align-items:center;gap:12px}
+  .shop-product-img{
+    width:42px;height:42px;background:white;
+    border:1px solid #E6EDE9;border-radius:8px;
+    display:grid;place-items:center;color:#1A1A2E;flex-shrink:0;
+  }
+  .shop-product-name{font-size:13.5px;font-weight:600;color:#0A1F18}
+  .shop-product-brand{font-size:11px;color:#7A8C84}
+  .shop-product-price{font-size:15px;font-weight:800;color:#1A1A2E;text-align:right}
+  .shop-product-price small{display:block;font-size:10px;color:#7A8C84;font-weight:500;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px}
+
+  /* ===== Service técnico ===== */
+  .tech{background:var(--bg-2)}
+  .tech-grid{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:60px;align-items:center;
+  }
+  @media(max-width:880px){.tech-grid{grid-template-columns:1fr;gap:40px}}
+  .tech-features{margin-top:32px;display:flex;flex-direction:column;gap:14px}
+  .tech-feature{
+    display:flex;gap:14px;align-items:flex-start;
+    padding:18px;
+    background:var(--bg);
+    border:1px solid var(--line);
+    border-radius:14px;
+  }
+  .tech-feature-icon{
+    width:42px;height:42px;
+    background:var(--cyan-soft);
+    color:var(--cyan-400);
+    border-radius:11px;
+    display:grid;place-items:center;flex-shrink:0;
+  }
+  .tech-feature h4{font-size:16px;font-weight:700;margin-bottom:3px;color:var(--ink)}
+  .tech-feature p{font-size:14px;color:var(--ink-3)}
+
+  .tech-photo-card{
+    border-radius:24px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:var(--shadow-lg);
+    border:1px solid var(--line);
+    aspect-ratio:1/1;
+  }
+  .tech-photo-card img{width:100%;height:100%;object-fit:cover}
+  .tech-photo-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 30%,rgba(10,10,11,0.95) 100%);
+  }
+  .tech-photo-content{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:32px;color:white;
+  }
+  .tech-photo-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;font-weight:500;
+    color:var(--cyan-400);letter-spacing:0.06em;text-transform:uppercase;
+    background:rgba(34,211,238,0.15);
+    border:1px solid rgba(34,211,238,0.25);
+    padding:5px 11px;border-radius:999px;
+    margin-bottom:14px;
+  }
+  .tech-photo-stats{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:18px;margin-top:20px;
+  }
+  .tech-photo-stat .num{font-size:36px;font-weight:800;letter-spacing:-0.03em;color:var(--cyan-400);line-height:1}
+  .tech-photo-stat .lbl{font-size:12px;color:rgba(255,255,255,0.7);margin-top:4px;line-height:1.3}
+
+  /* ===== IA Documental ===== */
+  .ai{background:var(--bg)}
+  .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
   @media(max-width:880px){.ai-grid{grid-template-columns:1fr;gap:48px}}
-  .ai-features-list{margin-top:32px;list-style:none}
+  .ai-features-list{margin-top:28px;list-style:none}
   .ai-features-list li{
-    padding:16px 0;
+    padding:14px 0;
     border-top:1px solid var(--line);
     display:flex;gap:14px;align-items:flex-start;
   }
   .ai-features-list li:last-child{border-bottom:1px solid var(--line)}
   .check-circle{
     width:24px;height:24px;border-radius:50%;
-    background:var(--green-700);
+    background:var(--cyan-400);
     display:grid;place-items:center;
-    flex-shrink:0;margin-top:2px;
-    color:white;
+    flex-shrink:0;margin-top:2px;color:var(--bg);
   }
-  .ai-features-list b{font-weight:600;color:var(--ink)}
-  .ai-features-list span{color:var(--ink-3);font-size:14.5px;display:block;margin-top:3px;line-height:1.5}
+  .ai-features-list b{font-weight:600;color:var(--ink);font-size:15px}
+  .ai-features-list span{color:var(--ink-3);font-size:14px;display:block;margin-top:3px;line-height:1.5}
 
-  /* mockup app */
   .mockup{
-    background:white;
+    background:var(--bg-2);
     border:1px solid var(--line);
     border-radius:18px;
-    padding:0;
     box-shadow:var(--shadow-lg);
     overflow:hidden;
   }
   .mockup-head{
     display:flex;justify-content:space-between;align-items:center;
     padding:14px 18px;
-    background:var(--bg-soft);
+    background:var(--bg-3);
     border-bottom:1px solid var(--line);
   }
   .mockup-dots{display:flex;gap:6px}
   .mockup-dots span{width:9px;height:9px;border-radius:50%;background:var(--line-2)}
   .mockup-dots span:first-child{background:#FF5F57}
   .mockup-dots span:nth-child(2){background:#FEBC2E}
-  .mockup-dots span:last-child{background:var(--green-400)}
-  .mockup-title{
-    font-family:'JetBrains Mono',monospace;
-    color:var(--ink-4);font-size:11px;
-  }
+  .mockup-dots span:last-child{background:var(--cyan-400)}
+  .mockup-title{font-family:'JetBrains Mono',monospace;color:var(--ink-4);font-size:11px}
   .mockup-body{padding:22px}
   .mockup-search{
-    background:var(--green-50);
-    border:1.5px solid var(--green-200);
-    border-radius:10px;
-    padding:12px 14px;
+    background:var(--cyan-soft);
+    border:1.5px solid rgba(34,211,238,0.3);
+    border-radius:10px;padding:12px 14px;
     color:var(--ink-2);
     display:flex;align-items:center;gap:10px;
-    font-size:14px;
-    margin-bottom:18px;
+    font-size:14px;margin-bottom:18px;
   }
-  .mockup-search svg{color:var(--green-700);flex-shrink:0}
+  .mockup-search svg{color:var(--cyan-400);flex-shrink:0}
   .mockup-search .cursor{
-    width:1.5px;height:14px;background:var(--green-700);
-    animation:blink 1s steps(2) infinite;
-    display:inline-block;
+    width:1.5px;height:14px;background:var(--cyan-400);
+    animation:blink 1s steps(2) infinite;display:inline-block;
   }
   @keyframes blink{50%{opacity:0}}
-  .mockup-meta{
-    font-size:11px;color:var(--ink-4);
-    margin-bottom:10px;
-    text-transform:uppercase;letter-spacing:0.1em;
-    font-weight:500;
-  }
+  .mockup-meta{font-size:11px;color:var(--ink-4);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.1em;font-weight:500}
   .mockup-row{
     display:flex;justify-content:space-between;
-    padding:11px 0;
-    border-bottom:1px solid var(--line);
-    font-family:'JetBrains Mono',monospace;
-    font-size:13px;
+    padding:11px 0;border-bottom:1px solid var(--line);
+    font-family:'JetBrains Mono',monospace;font-size:13px;
   }
   .mockup-row:last-child{border-bottom:none}
   .mockup-row .key{color:var(--ink-3)}
   .mockup-row .val{color:var(--ink);font-weight:600}
-  .mockup-row .val.ok{color:var(--green-700)}
-  .mockup-row.total{
-    padding-top:14px;margin-top:6px;
-    border-top:2px solid var(--green-700);
-    border-bottom:none;
-  }
-  .mockup-row.total .key{color:var(--green-700);font-weight:600}
-
-  /* ===== PRICING ===== */
-  .plans{background:var(--bg-soft)}
-  .plans-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
-    align-items:stretch;
-  }
-  @media(max-width:880px){.plans-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
-  .plan{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:var(--radius-lg);
-    padding:34px 30px;
-    display:flex;flex-direction:column;
-    position:relative;
-    transition:transform .3s,box-shadow .3s;
-  }
-  .plan:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-  .plan.featured{
-    background:var(--ink);
-    color:white;
-    border:none;
-    box-shadow:var(--shadow-lg);
-    transform:scale(1.02);
-  }
-  @media(max-width:880px){.plan.featured{transform:scale(1)}}
-  .plan-badge{
-    position:absolute;top:-12px;left:50%;transform:translateX(-50%);
-    background:var(--green-300);
-    color:var(--green-900);
-    font-size:11px;font-weight:700;letter-spacing:0.08em;
-    padding:6px 14px;
-    border-radius:999px;
-    text-transform:uppercase;
-  }
-  .plan h3{font-size:22px;font-weight:700}
-  .plan.featured h3{color:white}
-  .plan .plan-tag{color:var(--ink-3);font-size:14px;margin-top:4px}
-  .plan.featured .plan-tag{color:rgba(255,255,255,0.65)}
-  .plan-price{
-    margin:28px 0 6px;
-    font-size:48px;line-height:1;font-weight:800;letter-spacing:-0.03em;
-  }
-  .plan.featured .plan-price{color:white}
-  .plan-price .currency{font-size:22px;color:var(--ink-3);vertical-align:top;margin-right:4px;font-weight:600}
-  .plan-price .per{font-size:14px;color:var(--ink-3);font-weight:500;letter-spacing:0;margin-left:6px}
-  .plan.featured .plan-price .currency,.plan.featured .plan-price .per{color:rgba(255,255,255,0.6)}
-  .plan-desc{color:var(--ink-3);font-size:14px;border-top:1px solid var(--line);padding-top:18px;margin-top:8px}
-  .plan.featured .plan-desc{color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15)}
-  .plan ul{list-style:none;margin:22px 0 28px;flex:1}
-  .plan ul li{
-    padding:8px 0;font-size:14px;
-    display:flex;gap:10px;align-items:flex-start;
-  }
-  .plan ul li svg{flex-shrink:0;margin-top:3px;color:var(--green-700)}
-  .plan.featured ul li{color:rgba(255,255,255,0.9)}
-  .plan.featured ul li svg{color:var(--green-300)}
-  .plan ul li.muted{color:var(--ink-4)}
-  .plan ul li.muted svg{color:var(--ink-4)}
-  .plan .btn{justify-content:center;width:100%}
-  .plan.featured .btn-primary{background:var(--green-300);color:var(--green-900)}
-  .plan.featured .btn-primary:hover{background:white}
+  .mockup-row .val.ok{color:var(--cyan-400)}
+  .mockup-row.total{padding-top:14px;margin-top:6px;border-top:2px solid var(--cyan-400);border-bottom:none}
+  .mockup-row.total .key{color:var(--cyan-400);font-weight:600}
 
   /* ===== FAQ ===== */
-  .faq-grid{
-    display:grid;grid-template-columns:1fr 1.5fr;gap:60px;
-  }
+  .faq-section{background:var(--bg-2)}
+  .faq-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:60px}
   @media(max-width:880px){.faq-grid{grid-template-columns:1fr;gap:32px}}
   details.faq{
     border:1px solid var(--line);
-    border-radius:14px;
-    padding:20px 24px;
-    margin-bottom:10px;
-    background:white;
-    cursor:pointer;
+    border-radius:14px;padding:20px 24px;margin-bottom:10px;
+    background:var(--bg);cursor:pointer;
     transition:border-color .3s,box-shadow .3s;
   }
-  details.faq[open]{border-color:var(--green-400);box-shadow:var(--shadow-sm)}
+  details.faq[open]{border-color:var(--cyan-500);box-shadow:0 0 0 1px rgba(34,211,238,0.2)}
   details.faq summary{
     list-style:none;
     display:flex;justify-content:space-between;align-items:center;
-    font-size:17px;font-weight:600;
-    color:var(--ink);
+    font-size:17px;font-weight:600;color:var(--ink);
   }
   details.faq summary::-webkit-details-marker{display:none}
   details.faq summary .plus{
-    width:28px;height:28px;
-    border-radius:50%;
-    background:var(--green-100);
-    color:var(--green-700);
+    width:28px;height:28px;border-radius:50%;
+    background:var(--cyan-soft);color:var(--cyan-400);
     display:grid;place-items:center;
     flex-shrink:0;margin-left:18px;
     transition:transform .3s,background .3s;
   }
-  details.faq[open] summary .plus{
-    transform:rotate(45deg);
-    background:var(--green-700);
-    color:white;
-  }
-  details.faq p{
-    color:var(--ink-3);
-    margin-top:12px;font-size:15px;
-    max-width:62ch;
-    line-height:1.6;
-  }
+  details.faq[open] summary .plus{transform:rotate(45deg);background:var(--cyan-400);color:var(--bg)}
+  details.faq p{color:var(--ink-3);margin-top:12px;font-size:15px;max-width:62ch;line-height:1.6}
 
-  /* ===== CTA FINAL con formulario ===== */
+  /* ===== CTA FINAL ===== */
   .cta-final{
-    background:linear-gradient(135deg,var(--green-800) 0%,var(--green-900) 100%);
-    color:white;
+    background:
+      radial-gradient(ellipse 60% 80% at 80% 50%,rgba(34,211,238,0.15) 0%,transparent 60%),
+      var(--bg);
     position:relative;overflow:hidden;
   }
-  .cta-final::before{
-    content:"";position:absolute;
-    top:-50%;right:-20%;
-    width:70%;height:120%;
-    background:radial-gradient(ellipse,rgba(125,216,176,0.18) 0%,transparent 60%);
-    pointer-events:none;
-  }
   .cta-grid{
-    display:grid;grid-template-columns:1fr 1fr;
-    gap:80px;
-    position:relative;z-index:1;
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;
     align-items:center;
   }
   @media(max-width:880px){.cta-grid{grid-template-columns:1fr;gap:48px}}
-  .cta-text h2{color:white;font-size:clamp(40px,5.5vw,68px);font-weight:800;letter-spacing:-0.03em;line-height:1}
-  .cta-text h2 .mark{color:var(--green-300)}
-  .cta-text p{color:rgba(255,255,255,0.78);font-size:18px;margin-top:24px;max-width:48ch}
-  .cta-text .eyebrow{background:rgba(125,216,176,0.15);color:var(--green-300)}
-  .cta-text .eyebrow .dot{background:var(--green-300);box-shadow:0 0 0 3px rgba(125,216,176,0.3)}
-  .cta-channels{
-    margin-top:36px;
-    display:flex;flex-direction:column;gap:14px;
-  }
+  .cta-text h2{font-size:clamp(36px,5vw,60px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;color:var(--ink)}
+  .cta-text h2 .mark{color:var(--cyan-400)}
+  .cta-text p{color:var(--ink-3);font-size:17px;margin-top:22px;max-width:48ch}
+  .cta-channels{margin-top:32px;display:flex;flex-direction:column;gap:12px}
   .cta-channel{
     display:flex;align-items:center;gap:14px;
     padding:14px 18px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.1);
+    background:var(--bg-2);
+    border:1px solid var(--line);
     border-radius:12px;
-    text-decoration:none;color:white;
+    text-decoration:none;color:var(--ink);
     transition:all .25s ease;
   }
-  .cta-channel:hover{background:rgba(125,216,176,0.1);border-color:var(--green-300)}
+  .cta-channel:hover{background:var(--cyan-soft);border-color:var(--cyan-500)}
   .cta-channel-icon{
     width:40px;height:40px;
-    background:rgba(125,216,176,0.15);
+    background:var(--cyan-soft);
+    border:1px solid rgba(34,211,238,0.2);
     border-radius:10px;
     display:grid;place-items:center;
-    color:var(--green-300);
-    flex-shrink:0;
+    color:var(--cyan-400);flex-shrink:0;
   }
-  .cta-channel-text strong{display:block;font-size:15px;font-weight:600}
-  .cta-channel-text span{font-size:13px;color:rgba(255,255,255,0.6)}
+  .cta-channel-text strong{display:block;font-size:15px;font-weight:600;color:var(--ink)}
+  .cta-channel-text span{font-size:13px;color:var(--ink-3)}
 
-  /* Formulario */
   .contact-form{
-    background:white;
+    background:var(--bg-2);
+    border:1px solid var(--line);
     border-radius:var(--radius-lg);
     padding:32px;
-    color:var(--ink);
     box-shadow:var(--shadow-lg);
   }
-  .contact-form h3{font-size:20px;font-weight:700;margin-bottom:6px}
+  .contact-form h3{font-size:20px;font-weight:700;margin-bottom:6px;color:var(--ink)}
   .contact-form .form-sub{color:var(--ink-3);font-size:14px;margin-bottom:24px}
   .contact-form .field{margin-bottom:14px}
   .contact-form label{
-    display:block;
-    font-size:12px;font-weight:600;
+    display:block;font-size:12px;font-weight:600;
     color:var(--ink-2);margin-bottom:6px;
-    letter-spacing:0.01em;
   }
   .contact-form input,.contact-form textarea,.contact-form select{
     width:100%;
-    background:var(--bg-soft);
+    background:var(--bg);
     border:1.5px solid var(--line);
-    border-radius:10px;
-    padding:11px 14px;
+    border-radius:10px;padding:11px 14px;
     font-family:inherit;font-size:14.5px;
     color:var(--ink);
     transition:border-color .2s,background .2s;
   }
+  .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--ink-5)}
   .contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{
-    outline:none;border-color:var(--green-700);background:white;
+    outline:none;border-color:var(--cyan-400);
+    box-shadow:0 0 0 3px rgba(34,211,238,0.1);
   }
   .contact-form textarea{min-height:88px;resize:vertical}
   .contact-form .row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   @media(max-width:560px){.contact-form .row-2{grid-template-columns:1fr}}
-  .contact-form button{
-    width:100%;justify-content:center;margin-top:8px;
-    padding:14px;font-size:15px;
-  }
-  .form-msg{
-    margin-top:14px;
-    font-size:13px;text-align:center;
-    color:var(--green-700);font-weight:500;
-    min-height:18px;
-  }
+  .contact-form button{width:100%;justify-content:center;margin-top:8px;padding:14px;font-size:15px}
+  .form-msg{margin-top:14px;font-size:13px;text-align:center;color:var(--cyan-400);font-weight:500;min-height:18px}
 
   /* ===== FOOTER ===== */
-  footer{background:var(--ink);color:white;padding:80px 0 32px}
+  footer{background:var(--bg-2);color:var(--ink);padding:72px 0 28px;border-top:1px solid var(--line)}
   .footer-grid{
     display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:50px;
-    margin-bottom:50px;
+    gap:50px;margin-bottom:50px;
   }
   @media(max-width:880px){.footer-grid{grid-template-columns:1fr 1fr;gap:36px}}
-  .footer-brand .brand-name{color:white}
-  .footer-brand .brand-name span{color:var(--green-300)}
-  .footer-brand p{color:rgba(255,255,255,0.65);margin-top:16px;max-width:300px;font-size:14px;line-height:1.6}
+  .footer-brand .brand-name{color:var(--ink)}
+  .footer-brand .brand-name span{color:var(--cyan-400)}
+  .footer-brand p{color:var(--ink-3);margin-top:16px;max-width:300px;font-size:14px;line-height:1.6}
   .footer-col h5{
     font-family:'JetBrains Mono',monospace;
     font-size:11px;text-transform:uppercase;letter-spacing:0.12em;
-    color:var(--green-300);margin-bottom:14px;font-weight:500;
+    color:var(--cyan-400);margin-bottom:14px;font-weight:500;
   }
   .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-  .footer-col a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:14px;transition:color .2s}
-  .footer-col a:hover{color:var(--green-300)}
+  .footer-col a{color:var(--ink-3);text-decoration:none;font-size:14px;transition:color .2s}
+  .footer-col a:hover{color:var(--cyan-400)}
   .footer-bottom{
-    border-top:1px solid rgba(255,255,255,0.1);
-    padding-top:24px;
+    border-top:1px solid var(--line);padding-top:24px;
     display:flex;justify-content:space-between;align-items:center;
     flex-wrap:wrap;gap:12px;
-    font-size:13px;color:rgba(255,255,255,0.5);
+    font-size:13px;color:var(--ink-4);
   }
 
-  /* WhatsApp flotante */
-  .wa-float{
-    position:fixed;bottom:24px;right:24px;
-    width:58px;height:58px;
+  /* ===== Chat widget ===== */
+  .chat-widget{position:fixed;bottom:24px;right:24px;z-index:90}
+  .chat-toggle{
+    width:62px;height:62px;
     background:#25D366;
     border-radius:50%;
     display:grid;place-items:center;
-    color:white;text-decoration:none;
+    color:white;
     box-shadow:0 8px 24px -4px rgba(37,211,102,0.5);
-    z-index:90;
+    cursor:pointer;border:none;
     transition:transform .25s;
     animation:waPulse 2.5s infinite;
+    position:relative;
   }
-  .wa-float:hover{transform:scale(1.08)}
+  .chat-toggle:hover{transform:scale(1.08)}
+  .chat-badge{
+    position:absolute;top:-4px;right:-4px;
+    width:22px;height:22px;
+    background:#FF3B30;color:white;
+    border-radius:50%;
+    display:grid;place-items:center;
+    font-size:11px;font-weight:700;
+    border:2px solid var(--bg);
+  }
   @keyframes waPulse{
     0%,100%{box-shadow:0 8px 24px -4px rgba(37,211,102,0.5),0 0 0 0 rgba(37,211,102,0.5)}
     50%{box-shadow:0 8px 24px -4px rgba(37,211,102,0.5),0 0 0 14px rgba(37,211,102,0)}
   }
+  .chat-panel{
+    position:absolute;bottom:78px;right:0;
+    width:340px;
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:0 25px 60px -15px rgba(0,0,0,0.7);
+    overflow:hidden;
+    transform:translateY(20px) scale(0.95);
+    opacity:0;pointer-events:none;
+    transition:all .3s cubic-bezier(.2,.8,.2,1);
+  }
+  .chat-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+  @media(max-width:480px){.chat-panel{width:calc(100vw - 48px)}}
+  .chat-header{
+    background:linear-gradient(135deg,#0F172A 0%,#1E293B 100%);
+    color:white;padding:20px;position:relative;
+    border-bottom:1px solid var(--cyan-soft);
+  }
+  .chat-header-top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .chat-avatar{
+    width:40px;height:40px;
+    background:var(--cyan-soft);
+    border-radius:50%;
+    display:grid;place-items:center;
+    border:2px solid var(--cyan-400);
+    position:relative;
+  }
+  .chat-online{
+    width:10px;height:10px;background:var(--cyan-400);
+    border-radius:50%;border:2px solid #0F172A;
+    position:absolute;bottom:-1px;right:-1px;
+  }
+  .chat-info{flex:1}
+  .chat-info strong{display:block;font-size:15px;font-weight:700;color:white}
+  .chat-info span{font-size:12px;color:rgba(255,255,255,0.6)}
+  .chat-close{
+    background:none;border:none;color:white;
+    cursor:pointer;padding:4px;border-radius:6px;
+    opacity:0.7;transition:opacity .2s;
+  }
+  .chat-close:hover{opacity:1}
+  .chat-greeting{font-size:13px;color:rgba(255,255,255,0.85);margin-top:6px;line-height:1.4}
+  .chat-body{padding:20px;background:var(--bg);max-height:300px;overflow-y:auto}
+  .chat-bubble{
+    background:var(--bg-3);
+    border:1px solid var(--line);
+    padding:12px 14px;
+    border-radius:14px;border-bottom-left-radius:4px;
+    font-size:14px;color:var(--ink);
+    margin-bottom:10px;max-width:90%;line-height:1.5;
+  }
+  .chat-options{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+  .chat-option{
+    background:var(--bg-3);
+    border:1px solid var(--line);
+    color:var(--ink);
+    padding:10px 14px;border-radius:10px;
+    font-size:13.5px;font-weight:600;
+    text-align:left;cursor:pointer;
+    transition:all .2s;
+    font-family:inherit;text-decoration:none;display:block;
+  }
+  .chat-option:hover{background:var(--cyan-soft);border-color:var(--cyan-500);transform:translateX(3px);color:var(--cyan-400)}
+  .chat-option.primary{background:var(--cyan-400);color:var(--bg);border-color:var(--cyan-400)}
+  .chat-option.primary:hover{background:var(--cyan-300)}
+  .chat-footer{padding:12px 20px;border-top:1px solid var(--line);background:var(--bg-2);text-align:center}
+  .chat-footer a{color:var(--ink-4);font-size:11px;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
 
   /* scroll reveal */
-  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
   .reveal.visible{opacity:1;transform:none}
 </style>
 </head>
@@ -757,23 +874,23 @@
   <div class="inner">
     <a href="#" class="brand">
       <div class="brand-mark">
-        <!-- Logo: laptop con WiFi -->
         <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-          <rect x="8" y="12" width="14" height="9" rx="1.2" stroke="white" stroke-width="1.5"/>
-          <path d="M6 22h20l-1 2H7z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
-          <path d="M11 17l1.5-2 2 2 2-2.5 2 2" stroke="#7DD8B0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="19" cy="13.5" r="1" fill="#7DD8B0"/>
-          <path d="M21.5 10.5q1 .5 1 1.5M23 9q1.5 1 1.5 3" stroke="#7DD8B0" stroke-width="1" stroke-linecap="round"/>
+          <rect x="8" y="12" width="14" height="9" rx="1.2" stroke="#0A0A0B" stroke-width="1.6"/>
+          <path d="M6 22h20l-1 2H7z" stroke="#0A0A0B" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M11 17l1.5-2 2 2 2-2.5 2 2" stroke="#0A0A0B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="19" cy="13.5" r="1" fill="#0A0A0B"/>
+          <path d="M21.5 10.5q1 .5 1 1.5M23 9q1.5 1 1.5 3" stroke="#0A0A0B" stroke-width="1" stroke-linecap="round"/>
         </svg>
       </div>
       <span class="brand-name">Print<span>OS</span></span>
     </a>
     <div class="nav-links">
-      <a href="#soluciones">Soluciones</a>
-      <a href="#industrias">Industrias</a>
-      <a href="#planes">Planes</a>
+      <a href="#alquiler">Alquiler</a>
+      <a href="#tienda">Insumos</a>
+      <a href="#service">Service</a>
+      <a href="#ia">IA</a>
       <a href="#contacto" class="btn btn-primary">
-        Pedir demo
+        Cotizar ahora
         <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -783,45 +900,70 @@
 <!-- ===== HERO ===== -->
 <header class="hero">
   <div class="hero-grid-bg"></div>
-  <div class="container hero-inner">
+  <div class="container">
+    <div class="hero-grid">
 
-    <span class="eyebrow">
-      <span class="dot"></span>
-      Impresión inteligente · Argentina
-    </span>
+      <div>
+        <span class="eyebrow">
+          <span class="dot"></span>
+          Alquiler de impresoras · AMBA
+        </span>
 
-    <h1 class="display">
-      Tu impresora dejó de ser un fierro.<br>
-      Ahora es <span class="mark">inteligencia.</span>
-    </h1>
+        <h1 class="display">
+          Alquiler de <span class="mark">impresoras</span> y fotocopiadoras para tu empresa.
+        </h1>
 
-    <p class="lead" style="text-align:center;margin-left:auto;margin-right:auto">
-      Combinamos alquiler de equipos profesionales con soluciones de IA
-      para escanear, buscar y cargar facturas en tu sistema contable de forma automática.
-    </p>
+        <p class="lead">
+          Equipos Ricoh, HP, Brother y Lexmark con insumos, service y soporte
+          incluidos. Sin inversión inicial, sin sorpresas. Pagás un abono mensual
+          y nosotros nos encargamos del resto.
+        </p>
 
-    <div class="hero-cta">
-      <a href="#contacto" class="btn btn-primary">
-        Pedir una demo
-        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <a href="#soluciones" class="btn btn-ghost">Ver soluciones</a>
+        <div class="hero-cta">
+          <a href="#contacto" class="btn btn-primary">
+            Pedir cotización
+            <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/5491124686183" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.5 14.4l-2.5-1.2c-.4-.2-.9-.1-1.2.2l-.7.8c-.2.2-.5.3-.8.1-1-.5-2.4-1.8-3.2-3.4-.1-.3 0-.6.2-.8l.7-.7c.3-.3.4-.7.2-1.1L9.1 5.7c-.3-.6-1-.8-1.6-.5L6 6c-.6.3-.9 1-.9 1.7.2 1.5.9 4.7 4 7.7 3.2 3.2 6.4 4 7.9 4.2.7.1 1.3-.3 1.5-.9l.4-1.3c.2-.6-.1-1.3-.7-1.6z"/></svg>
+            WhatsApp directo
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-glow"></div>
+        <div class="hero-photo">
+          <!-- Foto del equipo trabajando con impresora Ricoh -->
+          <img src="https://images.pexels.com/photos/7691690/pexels-photo-7691690.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Equipo trabajando con impresora multifunción Ricoh" loading="eager"/>
+          <div class="photo-badge">
+            <div class="photo-badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <div>
+              <strong>Ricoh, HP, Brother y Lexmark</strong>
+              <span>Marcas oficiales con garantía</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <div class="num">+92%</div>
-        <div class="lbl">Lectura automática<br>de facturas</div>
-      </div>
-      <div class="hero-meta-item">
-        <div class="num">3×</div>
-        <div class="lbl">Más rápido en<br>cargas a Tango</div>
-      </div>
-      <div class="hero-meta-item">
+    <div class="hero-stats">
+      <div class="hero-stat">
         <div class="num">$0</div>
         <div class="lbl">Inversión inicial<br>en hardware</div>
       </div>
-      <div class="hero-meta-item">
+      <div class="hero-stat">
+        <div class="num">+200</div>
+        <div class="lbl">Empresas activas<br>en AMBA</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">&lt;4h</div>
+        <div class="lbl">SLA promedio<br>de respuesta</div>
+      </div>
+      <div class="hero-stat">
         <div class="num">24/7</div>
         <div class="lbl">Soporte técnico<br>incluido</div>
       </div>
@@ -829,200 +971,367 @@
   </div>
 </header>
 
-<!-- ===== MARQUEE ===== -->
-<div class="marquee">
-  <div class="marquee-label">Pensado para</div>
-  <div class="marquee-track">
-    <div class="marquee-item">Estudios contables</div>
-    <div class="marquee-item">Estudios jurídicos</div>
-    <div class="marquee-item">PyMEs</div>
-    <div class="marquee-item">Inmobiliarias</div>
-    <div class="marquee-item">Consultoras</div>
-    <div class="marquee-item">Clínicas</div>
-    <div class="marquee-item">Distribuidoras</div>
-    <div class="marquee-item">Estudios contables</div>
-    <div class="marquee-item">Estudios jurídicos</div>
-    <div class="marquee-item">PyMEs</div>
-    <div class="marquee-item">Inmobiliarias</div>
-    <div class="marquee-item">Consultoras</div>
-    <div class="marquee-item">Clínicas</div>
-    <div class="marquee-item">Distribuidoras</div>
+<!-- ===== Marcas ===== -->
+<div class="brands-bar">
+  <div class="container">
+    <div class="brands-label">Trabajamos con las mejores marcas del mercado</div>
+    <div class="brands-grid">
+      <span class="brand-logo featured">RICOH</span>
+      <span class="brand-logo">HP</span>
+      <span class="brand-logo">Brother</span>
+      <span class="brand-logo">Lexmark</span>
+    </div>
   </div>
 </div>
 
-<!-- ===== SOLUCIONES ===== -->
-<section id="soluciones">
+<!-- ===== BENEFICIOS ===== -->
+<section class="benefits" id="alquiler">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>Soluciones</span>
-      <h2 class="h2">Hardware confiable.<br><span class="mark">Software que piensa.</span></h2>
+      <span class="eyebrow"><span class="dot"></span>Por qué alquilar con PrintOS</span>
+      <h2 class="h2">Una metodología que se <span class="mark">adapta</span> a tu empresa.</h2>
       <p class="lead">
-        Te entregamos la impresora, los insumos, el mantenimiento y, cuando lo necesites,
-        la capa de IA que convierte cada papel en información estructurada.
+        Nos integramos a tus procesos para liberar recursos y que vos te concentres
+        en lo que realmente importa para tu negocio.
       </p>
     </div>
 
-    <div class="solutions-grid">
-
-      <!-- card destacada IA -->
-      <article class="sol-card feature reveal">
-        <div class="feature-grid">
-          <div class="feature-text">
-            <div class="icon-wrap">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/>
-                <path d="M3 7l9-4 9 4"/>
-                <path d="M8 12h8M8 16h5"/>
-              </svg>
-            </div>
-            <span class="num">/ 01 — IA Documental</span>
-            <h3>Escaneo y búsqueda inteligente de facturas</h3>
-            <p style="margin-top:14px">
-              Pasás la factura por la impresora. PrintOS lee, clasifica y carga automáticamente
-              en Tango, Bejerman, Holistor, Xubio o el ERP que uses. Después la encontrás escribiendo
-              lo que recordás: proveedor, mes, monto.
-            </p>
-            <div class="tags" style="margin-top:24px">
-              <span class="tag">Tango</span>
-              <span class="tag">Bejerman</span>
-              <span class="tag">Xubio</span>
-              <span class="tag">Holistor</span>
-              <span class="tag">API propia</span>
-            </div>
-          </div>
-          <div class="feature-visual">
-            <div class="scan-card">
-              <div class="scan-row">
-                <span><span class="pulse"></span>factura_2189.pdf</span>
-                <span class="ok">→ procesada</span>
-              </div>
-              <div class="scan-row">
-                <span>CUIT detectado</span>
-                <span class="val">30-71234567-8</span>
-              </div>
-              <div class="scan-row">
-                <span>Total con IVA</span>
-                <span class="val">$ 184.500,00</span>
-              </div>
-              <div class="scan-row">
-                <span>Asiento contable</span>
-                <span class="ok">cargado en Tango ✓</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- alquiler -->
-      <article class="sol-card span-7 reveal">
-        <div class="icon-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="6" y="3" width="12" height="6" rx="1"/>
-            <path d="M3 9h18v8H3z"/>
-            <rect x="6" y="14" width="12" height="7" rx="1"/>
-            <circle cx="17" cy="12" r="0.8" fill="currentColor"/>
-          </svg>
-        </div>
-        <span class="num">/ 02 — Hardware</span>
-        <h3>Alquiler de impresoras multifunción</h3>
-        <p>
-          Equipos color y blanco y negro, A4 y A3. Insumos, repuestos y service incluidos.
-          Pagás solo por lo que imprimís. Si rompe, lo cambiamos.
-        </p>
-        <div class="tags">
-          <span class="tag">B&amp;N + Color</span>
-          <span class="tag">A4 / A3</span>
-          <span class="tag">Service incluido</span>
-          <span class="tag">Sin costo de instalación</span>
-        </div>
-      </article>
-
-      <article class="sol-card span-5 reveal">
-        <div class="icon-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/>
-            <path d="M9 12l2 2 4-4"/>
-          </svg>
-        </div>
-        <span class="num">/ 03 — Confidencialidad</span>
-        <h3>Impresión segura por PIN</h3>
-        <p>
-          El documento se imprime sólo cuando vos llegás al equipo y lo desbloqueás.
-        </p>
-        <div class="tags">
-          <span class="tag">PIN</span>
-          <span class="tag">RFID</span>
-          <span class="tag">App</span>
-        </div>
-      </article>
-
-      <article class="sol-card span-6 reveal">
-        <div class="icon-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M3 3v18h18"/>
-            <path d="M7 14l4-4 4 3 5-7"/>
-          </svg>
-        </div>
-        <span class="num">/ 04 — Analytics</span>
-        <h3>Panel de control por usuario</h3>
-        <p>
-          Quién imprime qué, cuánto cuesta, qué se desperdicia. Reportes mensuales listos
-          para llevar a tu directorio.
-        </p>
-      </article>
-
-      <article class="sol-card span-6 reveal">
-        <div class="icon-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M12 7v5l3 2"/>
-          </svg>
-        </div>
-        <span class="num">/ 05 — Soporte</span>
-        <h3>Atención 24/7 con SLA real</h3>
-        <p>
-          Soporte por WhatsApp, mail y teléfono. Visita técnica garantizada en menos de 4 horas
-          en zonas urbanas.
-        </p>
-      </article>
-
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h4>Sin inversión inicial</h4>
+        <p>En equipamiento ni insumos. Nosotros nos encargamos de todo desde el día cero.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 0 1 15-6.7l3-2.3v6h-6"/><path d="M21 12a9 9 0 0 1-15 6.7l-3 2.3v-6h6"/></svg></div>
+        <h4>Equipamiento adaptable</h4>
+        <p>Si tu volumen cambia, cambiamos el equipo. Sin renegociar todo el contrato.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h4>Gestión experta</h4>
+        <p>Del parque de equipos y abastecimiento de insumos. Vos te enfocás en tu negocio.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <h4>Soluciones a medida</h4>
+        <p>Cada empresa es única. Evaluamos tu caso y te armamos una propuesta específica.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div>
+        <h4>Atención 1 a 1</h4>
+        <p>Un asesor asignado que conoce tu caso. No call centers ni tickets que se pierden.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h4>Soporte técnico</h4>
+        <p>Asistencia para todo tu parque de impresión en CABA y Gran Buenos Aires.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h4>Insumos originales</h4>
+        <p>Toners y consumibles que necesitás para una impresión continua y de calidad.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h4>Costos previsibles</h4>
+        <p>Transformá costos fijos en variables. Pagás solo por lo que imprimís cada mes.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== IA FEATURE ===== -->
-<section class="ai-feature" id="ia">
+<!-- ===== SERVICIOS ===== -->
+<section class="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Nuestros servicios</span>
+      <h2 class="h2">Todo lo que necesitás <span class="mark">en un solo lugar</span>.</h2>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card featured span-7 reveal">
+        <span class="num">/ 01 — Servicio principal</span>
+        <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="6" rx="1"/><path d="M3 9h18v8H3z"/><rect x="6" y="14" width="12" height="7" rx="1"/><circle cx="17" cy="12" r="0.8" fill="currentColor"/></svg></div>
+        <h3>Alquiler y venta de impresoras multifunción</h3>
+        <p>
+          Equipos color y blanco y negro, A4 y A3 de las mejores marcas. Ricoh, HP, Brother y Lexmark.
+          Insumos, repuestos y service incluidos en el abono. Si querés comprar el equipo en lugar de alquilarlo,
+          también tenemos opciones de venta directa.
+        </p>
+        <a href="#contacto" class="service-cta">Pedí tu cotización <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </article>
+
+      <article class="service-card shop span-5 reveal">
+        <span class="num">/ 02 — Tienda online</span>
+        <div class="ml-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+          MERCADO SHOP
+        </div>
+        <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div>
+        <h3>Insumos originales</h3>
+        <p>Toners, cartuchos, drums y consumibles para todas las marcas. Compra fácil con envío rápido a todo el país.</p>
+        <a href="#tienda" class="service-cta">Ir a la tienda <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </article>
+
+      <article class="service-card span-6 reveal">
+        <span class="num">/ 03 — Service técnico</span>
+        <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Reparación y mantenimiento</h3>
+        <p>¿Tu impresora no es de PrintOS? No importa. Reparamos cualquier marca con repuestos originales y diagnóstico sin cargo.</p>
+        <a href="#service" class="service-cta">Ver service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </article>
+
+      <article class="service-card span-6 reveal">
+        <span class="num">/ 04 — Diferencial PrintOS</span>
+        <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
+        <h3>IA documental</h3>
+        <p>Suma a tu impresora la capa de IA que escanea, busca y carga facturas en Tango y otros sistemas de forma automática.</p>
+        <a href="#ia" class="service-cta">Conocer más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATÁLOGO ===== -->
+<section class="catalog">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Catálogo</span>
+      <h2 class="h2">Equipos para <span class="mark">cada tamaño</span> de empresa.</h2>
+      <p class="lead">Desde oficinas chicas hasta corporativos. Trabajamos con todos los formatos.</p>
+    </div>
+
+    <div class="catalog-grid">
+      <article class="catalog-card reveal">
+        <div class="catalog-img">
+          <span class="catalog-tag">Oficina chica</span>
+          <svg viewBox="0 0 200 150" fill="none">
+            <ellipse cx="100" cy="138" rx="70" ry="4" fill="currentColor" opacity="0.15"/>
+            <rect x="50" y="50" width="100" height="80" rx="4" fill="currentColor"/>
+            <rect x="50" y="50" width="100" height="22" rx="4" fill="currentColor" opacity="0.7"/>
+            <rect x="60" y="78" width="80" height="6" rx="1" fill="white"/>
+            <rect x="60" y="88" width="80" height="6" rx="1" fill="white" opacity="0.7"/>
+            <rect x="62" y="100" width="76" height="22" rx="2" fill="white"/>
+          </svg>
+        </div>
+        <div class="catalog-info">
+          <div class="brand">Brother / HP</div>
+          <h4>Multifunción A4 B&amp;N</h4>
+          <ul class="catalog-features">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Hasta 30 ppm</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Imprime, escanea y copia</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> WiFi y red ethernet</li>
+          </ul>
+          <div class="catalog-cta">
+            <span class="ideal">Ideal: 1-5 personas</span>
+            <a href="#contacto">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="catalog-card reveal">
+        <div class="catalog-img">
+          <span class="catalog-tag">Más elegida</span>
+          <svg viewBox="0 0 200 150" fill="none">
+            <ellipse cx="100" cy="138" rx="80" ry="4" fill="currentColor" opacity="0.15"/>
+            <rect x="40" y="38" width="120" height="92" rx="4" fill="currentColor"/>
+            <rect x="40" y="38" width="120" height="26" rx="4" fill="currentColor" opacity="0.75"/>
+            <rect x="115" y="44" width="38" height="14" rx="2" fill="#22D3EE"/>
+            <rect x="50" y="74" width="100" height="6" rx="1" fill="white"/>
+            <rect x="50" y="84" width="100" height="6" rx="1" fill="white" opacity="0.7"/>
+            <rect x="52" y="98" width="96" height="26" rx="2" fill="white"/>
+          </svg>
+        </div>
+        <div class="catalog-info">
+          <div class="brand">Ricoh / Lexmark</div>
+          <h4>Multifunción A3 Color</h4>
+          <ul class="catalog-features">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Hasta 50 ppm color</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Doble bandeja A3/A4</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Impresión segura por PIN</li>
+          </ul>
+          <div class="catalog-cta">
+            <span class="ideal">Ideal: 5-30 personas</span>
+            <a href="#contacto">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="catalog-card reveal">
+        <div class="catalog-img">
+          <span class="catalog-tag">Alto volumen</span>
+          <svg viewBox="0 0 200 150" fill="none">
+            <ellipse cx="100" cy="138" rx="85" ry="4" fill="currentColor" opacity="0.15"/>
+            <rect x="35" y="20" width="130" height="110" rx="4" fill="currentColor"/>
+            <rect x="35" y="20" width="130" height="30" rx="4" fill="currentColor" opacity="0.8"/>
+            <rect x="120" y="26" width="38" height="18" rx="2" fill="#22D3EE"/>
+            <rect x="45" y="60" width="110" height="8" rx="1" fill="white"/>
+            <rect x="45" y="72" width="110" height="8" rx="1" fill="white" opacity="0.7"/>
+            <rect x="48" y="88" width="104" height="36" rx="2" fill="white"/>
+          </svg>
+        </div>
+        <div class="catalog-info">
+          <div class="brand">Ricoh Pro</div>
+          <h4>Equipos de producción</h4>
+          <ul class="catalog-features">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Hasta 90 ppm</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Bandejas de gran capacidad</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Finisher con grapadora</li>
+          </ul>
+          <div class="catalog-cta">
+            <span class="ideal">Ideal: +30 personas</span>
+            <a href="#contacto">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIENDA MERCADO SHOP ===== -->
+<section class="shop-banner" id="tienda">
+  <div class="container">
+    <div class="shop-grid">
+      <div class="shop-text reveal">
+        <span class="ml-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+          NUESTRA TIENDA EN MERCADO LIBRE
+        </span>
+        <h2>Insumos originales para todas las marcas.</h2>
+        <p>Toners, cartuchos, drums, fusores y repuestos. Comprá con la confianza y los envíos de Mercado Libre, con la seguridad de que son productos originales.</p>
+
+        <div class="shop-features">
+          <div class="shop-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><span>Productos 100% originales</span></div>
+          <div class="shop-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><span>Envíos a todo el país</span></div>
+          <div class="shop-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><span>Mercado Pago: hasta 12 cuotas</span></div>
+          <div class="shop-feature"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg><span>Garantía oficial</span></div>
+        </div>
+
+        <a href="#" target="_blank" class="btn btn-shop">
+          Visitar la tienda
+          <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="shop-visual reveal">
+        <div class="shop-visual-head">
+          <div class="ml-logo">mercado<span>shop</span></div>
+          <div style="font-size:11px;color:#7A8C84;font-weight:600;letter-spacing:0.05em;text-transform:uppercase">Productos · 124</div>
+        </div>
+        <div class="shop-products">
+          <div class="shop-product">
+            <div class="shop-product-info">
+              <div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div>
+              <div><div class="shop-product-name">Toner Ricoh SP 4520</div><div class="shop-product-brand">Original · Negro</div></div>
+            </div>
+            <div class="shop-product-price">$45.900<small>12 cuotas</small></div>
+          </div>
+          <div class="shop-product">
+            <div class="shop-product-info">
+              <div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div>
+              <div><div class="shop-product-name">Cartucho HP 414A</div><div class="shop-product-brand">Original · CMYK</div></div>
+            </div>
+            <div class="shop-product-price">$38.500<small>12 cuotas</small></div>
+          </div>
+          <div class="shop-product">
+            <div class="shop-product-info">
+              <div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div>
+              <div><div class="shop-product-name">Drum Brother DR-2340</div><div class="shop-product-brand">Original · 12.000 págs.</div></div>
+            </div>
+            <div class="shop-product-price">$52.300<small>12 cuotas</small></div>
+          </div>
+          <div class="shop-product">
+            <div class="shop-product-info">
+              <div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div>
+              <div><div class="shop-product-name">Toner Lexmark 60F4H00</div><div class="shop-product-brand">Original · Alto rendimiento</div></div>
+            </div>
+            <div class="shop-product-price">$67.800<small>12 cuotas</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE TÉCNICO ===== -->
+<section class="tech" id="service">
+  <div class="container">
+    <div class="tech-grid">
+      <div class="reveal">
+        <span class="eyebrow"><span class="dot"></span>Service técnico</span>
+        <h2 class="h2" style="margin-top:18px">Reparamos <span class="mark">cualquier</span> marca de impresora.</h2>
+        <p class="lead" style="margin-top:20px">¿Ya tenés tu equipo y necesitás mantenimiento o reparación? Trabajamos con todas las marcas, no sólo las que alquilamos. Diagnóstico sin cargo y repuestos originales.</p>
+
+        <div class="tech-features">
+          <div class="tech-feature">
+            <div class="tech-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div><h4>Respuesta en menos de 4 horas</h4><p>SLA garantizado en zonas de CABA y AMBA. Visitamos donde estés.</p></div>
+          </div>
+          <div class="tech-feature">
+            <div class="tech-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <div><h4>Repuestos originales</h4><p>Stock permanente de repuestos para las principales marcas del mercado.</p></div>
+          </div>
+          <div class="tech-feature">
+            <div class="tech-feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><h4>Diagnóstico sin cargo</h4><p>Te pasamos un presupuesto antes de tocar nada. Si no aceptás, no pagás.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="tech-photo-card">
+          <!-- Foto: pantalla táctil de impresora (close-up tecnológico) -->
+          <img src="https://images.pexels.com/photos/17235421/pexels-photo-17235421.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pantalla táctil de impresora multifunción profesional" loading="lazy"/>
+          <div class="tech-photo-overlay"></div>
+          <div class="tech-photo-content">
+            <span class="tech-photo-eyebrow"><span style="width:6px;height:6px;border-radius:50%;background:var(--cyan-400);box-shadow:0 0 0 3px rgba(34,211,238,0.3)"></span>Cobertura técnica</span>
+            <h3 style="color:white;font-size:24px;font-weight:700;line-height:1.2">Service rápido y profesional</h3>
+            <p style="color:rgba(255,255,255,0.75);font-size:14px;margin-top:6px">Atendemos a más de 200 empresas con SLA real, no promesas.</p>
+
+            <div class="tech-photo-stats">
+              <div class="tech-photo-stat">
+                <div class="num">&lt;4h</div>
+                <div class="lbl">Tiempo de respuesta</div>
+              </div>
+              <div class="tech-photo-stat">
+                <div class="num">98%</div>
+                <div class="lbl">Resolución 1ª visita</div>
+              </div>
+              <div class="tech-photo-stat">
+                <div class="num">+200</div>
+                <div class="lbl">Empresas activas</div>
+              </div>
+              <div class="tech-photo-stat">
+                <div class="num">24/7</div>
+                <div class="lbl">Soporte WhatsApp</div>
+              </div>
+            </div>
+
+            <div style="margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan-400);letter-spacing:0.1em;text-transform:uppercase">
+              CABA · ZN · ZS · ZO
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IA Documental ===== -->
+<section class="ai" id="ia">
   <div class="container">
     <div class="ai-grid">
       <div class="reveal">
-        <span class="eyebrow"><span class="dot"></span>IA documental</span>
-        <h2 class="h2" style="margin-top:18px">El asistente que <span class="mark">nunca</span> pierde una factura.</h2>
-        <p class="lead" style="margin-top:18px">
-          Tus papeles entran por la impresora, salen como datos. Le preguntás a PrintOS
-          en español, y te trae lo que necesitás.
-        </p>
+        <span class="eyebrow"><span class="dot"></span>Diferencial PrintOS</span>
+        <h2 class="h2" style="margin-top:18px">Sumale <span class="mark">inteligencia</span> a tu impresora.</h2>
+        <p class="lead" style="margin-top:18px">Una capa de IA opcional que escanea, busca y carga facturas en Tango y otros sistemas de forma automática. Para estudios contables, jurídicos y empresas con muchos comprobantes.</p>
 
         <ul class="ai-features-list">
-          <li>
-            <span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
-            <div><b>OCR + IA contextual</b><span>Lee facturas A, B, C, recibos, tickets fiscales y notas de crédito.</span></div>
-          </li>
-          <li>
-            <span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
-            <div><b>Carga automática en Tango y otros</b><span>Mapea cuentas, centros de costo y código de proveedor sin intervención.</span></div>
-          </li>
-          <li>
-            <span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
-            <div><b>Búsqueda en lenguaje natural</b><span>"Mostrame lo que facturó Telecom en marzo arriba de 100 mil".</span></div>
-          </li>
-          <li>
-            <span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
-            <div><b>Validación contra AFIP</b><span>Chequea CAE, CUIT y domicilio fiscal en tiempo real.</span></div>
-          </li>
-          <li>
-            <span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
-            <div><b>Datos en Argentina</b><span>Tus documentos no salen del país. Trazabilidad completa.</span></div>
-          </li>
+          <li><span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span><div><b>OCR + IA contextual</b><span>Lee facturas A, B, C, recibos, tickets fiscales y notas de crédito.</span></div></li>
+          <li><span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span><div><b>Carga automática en Tango y otros</b><span>Mapea cuentas, centros de costo y código de proveedor sin intervención.</span></div></li>
+          <li><span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span><div><b>Búsqueda en lenguaje natural</b><span>"Mostrame lo que facturó Telecom en marzo arriba de 100 mil".</span></div></li>
+          <li><span class="check-circle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span><div><b>Validación contra AFIP</b><span>Chequea CAE, CUIT y domicilio fiscal en tiempo real.</span></div></li>
         </ul>
       </div>
 
@@ -1039,22 +1348,10 @@
               <span class="cursor"></span>
             </div>
             <div class="mockup-meta">12 resultados · ordenados por fecha</div>
-            <div class="mockup-row">
-              <span class="key">FAC-A 0001-00021847</span>
-              <span class="val">$ 184.500</span>
-            </div>
-            <div class="mockup-row">
-              <span class="key">FAC-A 0001-00021903</span>
-              <span class="val">$ 192.300</span>
-            </div>
-            <div class="mockup-row">
-              <span class="key">FAC-A 0001-00021971</span>
-              <span class="val">$ 198.700</span>
-            </div>
-            <div class="mockup-row total">
-              <span class="key">→ Total Q1 2026</span>
-              <span class="val ok">$ 575.500</span>
-            </div>
+            <div class="mockup-row"><span class="key">FAC-A 0001-00021847</span><span class="val">$ 184.500</span></div>
+            <div class="mockup-row"><span class="key">FAC-A 0001-00021903</span><span class="val">$ 192.300</span></div>
+            <div class="mockup-row"><span class="key">FAC-A 0001-00021971</span><span class="val">$ 198.700</span></div>
+            <div class="mockup-row total"><span class="key">→ Total Q1 2026</span><span class="val ok">$ 575.500</span></div>
           </div>
         </div>
       </div>
@@ -1062,247 +1359,40 @@
   </div>
 </section>
 
-<!-- ===== CÓMO FUNCIONA ===== -->
-<section class="how" id="como">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>Cómo funciona</span>
-      <h2 class="h2">De papel a dato,<br>en <span class="mark">cuatro pasos.</span></h2>
-      <p class="lead">
-        Todo el proceso está pensado para que tu equipo no tenga que aprender nada nuevo.
-      </p>
-    </div>
-
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-num">1</div>
-        <h4>Te entregamos el equipo</h4>
-        <p>Visitamos tu oficina, evaluamos tu volumen y dejamos instalado el equipo que mejor encaja.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">2</div>
-        <h4>Activás la capa IA</h4>
-        <p>Conectamos la impresora a tu sistema contable y configuramos las reglas de tu estudio.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">3</div>
-        <h4>Escaneás como siempre</h4>
-        <p>Tu equipo apoya las facturas, aprieta un botón y se va. PrintOS hace el resto.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">4</div>
-        <h4>Buscás y encontrás</h4>
-        <p>Desde tu compu o el celular, encontrás cualquier comprobante en lenguaje natural.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== INDUSTRIAS ===== -->
-<section id="industrias">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>Industrias</span>
-      <h2 class="h2">Soluciones <span class="mark">verticales</span>, no genéricas.</h2>
-      <p class="lead">
-        Cada rubro tiene su propio idioma. Diseñamos integraciones específicas para cada uno.
-      </p>
-    </div>
-
-    <div class="industries-grid">
-      <article class="industry-card reveal">
-        <div class="industry-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="4" y="3" width="16" height="18" rx="2"/>
-            <path d="M8 8h8M8 12h8M8 16h5"/>
-          </svg>
-        </div>
-        <h3>Estudios contables</h3>
-        <p>Carga automática en Tango, Bejerman y Holistor. Conciliación bancaria asistida y alertas de vencimientos AFIP.</p>
-        <div class="arrow">Ver más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="industry-card reveal">
-        <div class="industry-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>
-          </svg>
-        </div>
-        <h3>Estudios jurídicos</h3>
-        <p>Impresión segura por PIN, indexado de expedientes y búsqueda inteligente en escritos y dictámenes.</p>
-        <div class="arrow">Ver más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="industry-card reveal">
-        <div class="industry-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M3 9l9-6 9 6v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            <path d="M9 22V12h6v10"/>
-          </svg>
-        </div>
-        <h3>PyMEs y distribuidoras</h3>
-        <p>Lectura de remitos y notas de pedido, control de stock contra documentos y auditoría de costos de impresión.</p>
-        <div class="arrow">Ver más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="industry-card reveal">
-        <div class="industry-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 2v20M2 12h20"/>
-            <circle cx="12" cy="12" r="9"/>
-          </svg>
-        </div>
-        <h3>Clínicas y consultorios</h3>
-        <p>Indexado de historias clínicas en papel, OCR de recetas y cumplimiento de confidencialidad por usuario.</p>
-        <div class="arrow">Ver más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="industry-card reveal">
-        <div class="industry-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M3 21h18M5 21V8l7-5 7 5v13"/>
-            <path d="M9 21v-6h6v6"/>
-          </svg>
-        </div>
-        <h3>Inmobiliarias</h3>
-        <p>Digitalización de contratos, búsqueda por cláusula y firma asistida con trazabilidad legal.</p>
-        <div class="arrow">Ver más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="industry-card reveal">
-        <div class="industry-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
-            <circle cx="17" cy="7" r="3"/>
-            <path d="M21 21v-1.5a3 3 0 0 0-3-3"/>
-          </svg>
-        </div>
-        <h3>Consultoras</h3>
-        <p>Digitalización de informes, control de versiones y archivo inteligente de propuestas y reportes.</p>
-        <div class="arrow">Ver más <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PLANES ===== -->
-<section class="plans" id="planes">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="dot"></span>Planes</span>
-      <h2 class="h2">Una tarifa <span class="mark">clara</span>. Sin sorpresas.</h2>
-      <p class="lead">
-        Pagás un abono mensual que incluye equipo, insumos, mantenimiento y soporte.
-      </p>
-    </div>
-
-    <div class="plans-grid">
-      <article class="plan reveal">
-        <h3>Esencial</h3>
-        <div class="plan-tag">Para equipos chicos</div>
-        <div class="plan-price"><span class="currency">$</span>69.900<span class="per">/mes</span></div>
-        <div class="plan-desc">Equipo multifunción A4 color, hasta 2.000 páginas mensuales.</div>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Impresora multifunción A4 color</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Insumos y service incluidos</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Soporte por mail y WhatsApp</li>
-          <li class="muted"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> IA documental</li>
-          <li class="muted"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Carga automática a ERP</li>
-        </ul>
-        <a href="#contacto" class="btn btn-ghost">Cotizar</a>
-      </article>
-
-      <article class="plan featured reveal">
-        <div class="plan-badge">Más elegido</div>
-        <h3>Profesional</h3>
-        <div class="plan-tag">Para estudios contables y jurídicos</div>
-        <div class="plan-price"><span class="currency">$</span>129.900<span class="per">/mes</span></div>
-        <div class="plan-desc">Todo lo del plan Esencial + IA documental con carga automática.</div>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Equipo A3/A4 color de alta gama</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Hasta 5.000 páginas mensuales</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> IA documental: OCR + búsqueda</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Carga automática en Tango / Bejerman</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Validación AFIP en tiempo real</li>
-        </ul>
-        <a href="#contacto" class="btn btn-primary">Pedir demo</a>
-      </article>
-
-      <article class="plan reveal">
-        <h3>Empresa</h3>
-        <div class="plan-tag">Múltiples sucursales</div>
-        <div class="plan-price"><span style="font-size:36px;color:var(--ink-3)">A medida</span></div>
-        <div class="plan-desc">Flota personalizada, integraciones a tu medida y SLA dedicado.</div>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Flota multi-sucursal centralizada</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Páginas ilimitadas</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Integraciones a medida (API)</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Account manager dedicado</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> SLA 4hs y soporte 24/7</li>
-        </ul>
-        <a href="#contacto" class="btn btn-ghost">Hablemos</a>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ===== FAQ ===== -->
-<section>
+<section class="faq-section">
   <div class="container">
     <div class="faq-grid">
       <div class="reveal">
-        <span class="eyebrow"><span class="dot"></span>FAQ</span>
-        <h2 class="h2" style="margin-top:18px;font-size:clamp(32px,4vw,48px)">Preguntas que <span class="mark">ya nos hicieron</span>.</h2>
-        <p class="lead" style="margin-top:20px;font-size:16px">
-          Si la tuya no está acá, escribinos. Respondemos en menos de 24 horas hábiles.
-        </p>
+        <span class="eyebrow"><span class="dot"></span>Preguntas frecuentes</span>
+        <h2 class="h2" style="margin-top:18px;font-size:clamp(30px,4vw,44px)">Conocé más sobre <span class="mark">nuestro servicio</span>.</h2>
+        <p class="lead" style="margin-top:20px;font-size:16px">Si tu duda no está acá, escribinos por WhatsApp y te respondemos al toque.</p>
       </div>
 
       <div class="reveal">
         <details class="faq" open>
-          <summary>¿Necesito comprar una impresora nueva?
-            <span class="plus">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <p>No. PrintOS es alquiler: te llevamos el equipo, lo instalamos y nos hacemos cargo de todo el ciclo de vida. Vos sólo pagás un abono mensual y, si querés, le sumás la capa de IA.</p>
+          <summary>¿Trabajan con alguna marca de equipos en particular?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Trabajamos principalmente con Ricoh y HP, y también con Brother y Lexmark según la necesidad de cada cliente. Tenemos soporte técnico capacitado y stock de repuestos para todas las marcas líderes del mercado.</p>
         </details>
-
         <details class="faq">
-          <summary>¿Funciona con Tango Gestión?
-            <span class="plus">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <p>Sí. Tenemos integración nativa con Tango (Gestión y Astor), Bejerman, Holistor y Xubio. Para otros sistemas usamos nuestra API o exportación por CSV/Excel pre-formateado.</p>
+          <summary>¿Cómo funciona el alquiler de impresoras?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Pagás un abono mensual fijo que incluye el equipo, los insumos (toners), el service técnico y el soporte. Sin inversión inicial, sin sorpresas. Si tu volumen cambia, ajustamos el equipo.</p>
         </details>
-
         <details class="faq">
-          <summary>¿Qué pasa con la confidencialidad?
-            <span class="plus">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <p>Todo el procesamiento se hace en infraestructura ubicada en Argentina, con cifrado en tránsito y en reposo. Cumplimos con la Ley 25.326 y firmamos NDAs específicos cuando el cliente lo requiere.</p>
+          <summary>¿Cuáles son las ventajas de alquilar vs comprar?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Con el alquiler ahorrás costos, transformás costos fijos en variables, evitás inversiones grandes en equipos que se desactualizan, y tenés siempre tecnología al día. Además te despreocupás del mantenimiento y los insumos.</p>
         </details>
-
         <details class="faq">
-          <summary>¿Qué precisión tiene la lectura de facturas?
-            <span class="plus">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <p>En facturas A, B y C estándar superamos el 92% de extracción correcta sin intervención humana. Para los casos dudosos, marcamos la factura para revisión rápida en lugar de cargar datos incorrectos.</p>
+          <summary>¿Hacen también venta directa de impresoras?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Sí. Si preferís comprar el equipo en lugar de alquilarlo, también tenemos esa opción con financiación. Y siempre podés sumar nuestro service técnico aparte para mantener la garantía.</p>
         </details>
-
         <details class="faq">
-          <summary>¿Hay permanencia mínima?
-            <span class="plus">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>
-            </span>
-          </summary>
-          <p>El contrato estándar es a 12 meses, pero ofrecemos también modalidad mes a mes con un pequeño recargo. Si te vas dentro del año, te llevamos el equipo sin penalidades.</p>
+          <summary>¿Qué zona cubren con el service?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>CABA y todo el AMBA: Zona Norte, Sur, Oeste y Gran Buenos Aires. Para clientes del interior coordinamos por WhatsApp y derivamos a técnicos asociados.</p>
+        </details>
+        <details class="faq">
+          <summary>¿Hay permanencia mínima en el contrato?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>El contrato estándar es a 12 meses, pero ofrecemos también modalidad mes a mes con un pequeño recargo. Si querés terminar antes, te llevamos el equipo sin penalidades raras.</p>
         </details>
       </div>
     </div>
@@ -1315,88 +1405,51 @@
     <div class="cta-grid">
       <div class="cta-text reveal">
         <span class="eyebrow"><span class="dot"></span>Empezá hoy</span>
-        <h2 style="margin-top:20px">Pedí una <span class="mark">demo</span>.<br>30 minutos.</h2>
-        <p>
-          Te visitamos en tu oficina o coordinamos por videollamada. Sin compromiso,
-          sin letra chica, y con un caso real cargado con tus datos.
-        </p>
+        <h2 style="margin-top:20px">Pedí tu <span class="mark">cotización</span>. Sin compromiso.</h2>
+        <p>Te respondemos en menos de 24 horas hábiles con una propuesta a medida según tu volumen de impresión y necesidades.</p>
 
         <div class="cta-channels">
+          <a href="https://wa.me/5491124686183" class="cta-channel">
+            <div class="cta-channel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4l-2.5-1.2c-.4-.2-.9-.1-1.2.2l-.7.8c-.2.2-.5.3-.8.1-1-.5-2.4-1.8-3.2-3.4-.1-.3 0-.6.2-.8l.7-.7c.3-.3.4-.7.2-1.1L9.1 5.7c-.3-.6-1-.8-1.6-.5L6 6c-.6.3-.9 1-.9 1.7.2 1.5.9 4.7 4 7.7 3.2 3.2 6.4 4 7.9 4.2.7.1 1.3-.3 1.5-.9l.4-1.3c.2-.6-.1-1.3-.7-1.6z"/></svg></div>
+            <div class="cta-channel-text"><strong>+54 9 11 2468-6183</strong><span>WhatsApp · Lunes a viernes 9 a 18hs</span></div>
+          </a>
           <a href="mailto:info@printos.com.ar" class="cta-channel">
-            <div class="cta-channel-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            </div>
-            <div class="cta-channel-text">
-              <strong>info@printos.com.ar</strong>
-              <span>Respondemos en menos de 24hs hábiles</span>
-            </div>
+            <div class="cta-channel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <div class="cta-channel-text"><strong>info@printos.com.ar</strong><span>Respondemos en menos de 24hs hábiles</span></div>
           </a>
-          <a href="https://wa.me/" class="cta-channel">
-            <div class="cta-channel-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4l-2.5-1.2c-.4-.2-.9-.1-1.2.2l-.7.8c-.2.2-.5.3-.8.1-1-.5-2.4-1.8-3.2-3.4-.1-.3 0-.6.2-.8l.7-.7c.3-.3.4-.7.2-1.1L9.1 5.7c-.3-.6-1-.8-1.6-.5L6 6c-.6.3-.9 1-.9 1.7.2 1.5.9 4.7 4 7.7 3.2 3.2 6.4 4 7.9 4.2.7.1 1.3-.3 1.5-.9l.4-1.3c.2-.6-.1-1.3-.7-1.6z"/></svg>
-            </div>
-            <div class="cta-channel-text">
-              <strong>WhatsApp directo</strong>
-              <span>Lunes a viernes de 9 a 18hs</span>
-            </div>
-          </a>
-        </div>
-
-        <div style="margin-top:36px;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(125,216,176,0.7);letter-spacing:0.15em;text-transform:uppercase">
-          CABA · Buenos Aires · Córdoba · Rosario
         </div>
       </div>
 
       <form class="contact-form reveal" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
-        <h3>O dejanos tus datos</h3>
-        <p class="form-sub">Te contactamos nosotros.</p>
-
+        <h3>Completá el formulario</h3>
+        <p class="form-sub">Y un asesor comercial se comunica con vos.</p>
         <input type="hidden" name="access_key" value="24d9ffc6-6ebe-4e1c-8fbb-fb987a3f287a">
         <input type="hidden" name="subject" value="Nueva consulta desde PrintOS">
         <input type="hidden" name="from_name" value="Web PrintOS">
         <input type="checkbox" name="botcheck" style="display:none;">
 
         <div class="row-2">
-          <div class="field">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez">
-          </div>
-          <div class="field">
-            <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa" placeholder="Estudio Pérez & Asoc.">
-          </div>
+          <div class="field"><label for="nombre">Nombre y apellido</label><input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez"></div>
+          <div class="field"><label for="empresa">Empresa</label><input type="text" id="empresa" name="empresa" placeholder="Mi empresa SA"></div>
         </div>
-
         <div class="row-2">
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="juan@empresa.com.ar">
-          </div>
-          <div class="field">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+54 11 1234-5678">
-          </div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="juan@empresa.com.ar"></div>
+          <div class="field"><label for="telefono">Teléfono</label><input type="tel" id="telefono" name="telefono" placeholder="+54 11 1234-5678"></div>
         </div>
-
         <div class="field">
-          <label for="rubro">Rubro</label>
-          <select id="rubro" name="rubro">
-            <option>Estudio contable</option>
-            <option>Estudio jurídico</option>
-            <option>PyME / Distribuidora</option>
-            <option>Clínica / Consultorio</option>
-            <option>Inmobiliaria</option>
-            <option>Consultora</option>
+          <label for="interes">¿Qué te interesa?</label>
+          <select id="interes" name="interes">
+            <option>Alquilar una impresora</option>
+            <option>Comprar una impresora</option>
+            <option>Comprar insumos</option>
+            <option>Service técnico</option>
+            <option>IA documental</option>
             <option>Otro</option>
           </select>
         </div>
+        <div class="field"><label for="mensaje">Contanos más</label><textarea id="mensaje" name="mensaje" placeholder="Cuántos equipos necesitás, qué volumen mensual, qué marca preferís..."></textarea></div>
 
-        <div class="field">
-          <label for="mensaje">¿Qué necesitás?</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Cuántos equipos, qué sistema usan, etc."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-dark">
+        <button type="submit" class="btn btn-primary">
           Enviar consulta
           <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </button>
@@ -1414,58 +1467,76 @@
         <a href="#" class="brand">
           <div class="brand-mark">
             <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-              <rect x="8" y="12" width="14" height="9" rx="1.2" stroke="white" stroke-width="1.5"/>
-              <path d="M6 22h20l-1 2H7z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M11 17l1.5-2 2 2 2-2.5 2 2" stroke="#7DD8B0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="19" cy="13.5" r="1" fill="#7DD8B0"/>
-              <path d="M21.5 10.5q1 .5 1 1.5M23 9q1.5 1 1.5 3" stroke="#7DD8B0" stroke-width="1" stroke-linecap="round"/>
+              <rect x="8" y="12" width="14" height="9" rx="1.2" stroke="#0A0A0B" stroke-width="1.6"/>
+              <path d="M6 22h20l-1 2H7z" stroke="#0A0A0B" stroke-width="1.6" stroke-linejoin="round"/>
+              <circle cx="19" cy="13.5" r="1" fill="#0A0A0B"/>
             </svg>
           </div>
-          <span class="brand-name" style="color:white">Print<span>OS</span></span>
+          <span class="brand-name">Print<span>OS</span></span>
         </a>
-        <p>Impresión inteligente para empresas que prefieren pensar en su negocio antes que en el papel.</p>
+        <p>Alquiler, venta y service de impresoras profesionales para empresas en CABA y AMBA. Marcas oficiales: Ricoh, HP, Brother y Lexmark.</p>
       </div>
-      <div class="footer-col">
-        <h5>Producto</h5>
-        <ul>
-          <li><a href="#soluciones">Soluciones</a></li>
-          <li><a href="#ia">IA documental</a></li>
-          <li><a href="#planes">Planes</a></li>
-          <li><a href="#como">Cómo funciona</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Industrias</h5>
-        <ul>
-          <li><a href="#industrias">Estudios contables</a></li>
-          <li><a href="#industrias">Estudios jurídicos</a></li>
-          <li><a href="#industrias">PyMEs</a></li>
-          <li><a href="#industrias">Clínicas</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Empresa</h5>
-        <ul>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="#">Soporte</a></li>
-          <li><a href="#">Privacidad</a></li>
-          <li><a href="#">Términos</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h5>Servicios</h5><ul><li><a href="#alquiler">Alquiler</a></li><li><a href="#tienda">Insumos</a></li><li><a href="#service">Service técnico</a></li><li><a href="#ia">IA documental</a></li></ul></div>
+      <div class="footer-col"><h5>Marcas</h5><ul><li><a href="#">Ricoh</a></li><li><a href="#">HP</a></li><li><a href="#">Brother</a></li><li><a href="#">Lexmark</a></li></ul></div>
+      <div class="footer-col"><h5>Contacto</h5><ul><li><a href="https://wa.me/5491124686183">WhatsApp</a></li><li><a href="mailto:info@printos.com.ar">Email</a></li><li><a href="#contacto">Cotizar</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 PrintOS · Hecho con cuidado en Argentina</span>
-      <span class="mono" style="font-size:11px">v 2.5.0</span>
+      <span class="mono" style="font-size:11px">v 4.0</span>
     </div>
   </div>
 </footer>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/" class="wa-float" aria-label="WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.5 14.4l-2.5-1.2c-.4-.2-.9-.1-1.2.2l-.7.8c-.2.2-.5.3-.8.1-1-.5-2.4-1.8-3.2-3.4-.1-.3 0-.6.2-.8l.7-.7c.3-.3.4-.7.2-1.1L9.1 5.7c-.3-.6-1-.8-1.6-.5L6 6c-.6.3-.9 1-.9 1.7.2 1.5.9 4.7 4 7.7 3.2 3.2 6.4 4 7.9 4.2.7.1 1.3-.3 1.5-.9l.4-1.3c.2-.6-.1-1.3-.7-1.6z"/>
-  </svg>
-</a>
+<!-- ===== Chat widget ===== -->
+<div class="chat-widget">
+  <button class="chat-toggle" id="chat-toggle" aria-label="Abrir chat">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.5 14.4l-2.5-1.2c-.4-.2-.9-.1-1.2.2l-.7.8c-.2.2-.5.3-.8.1-1-.5-2.4-1.8-3.2-3.4-.1-.3 0-.6.2-.8l.7-.7c.3-.3.4-.7.2-1.1L9.1 5.7c-.3-.6-1-.8-1.6-.5L6 6c-.6.3-.9 1-.9 1.7.2 1.5.9 4.7 4 7.7 3.2 3.2 6.4 4 7.9 4.2.7.1 1.3-.3 1.5-.9l.4-1.3c.2-.6-.1-1.3-.7-1.6z"/>
+    </svg>
+    <span class="chat-badge">1</span>
+  </button>
+
+  <div class="chat-panel" id="chat-panel">
+    <div class="chat-header">
+      <div class="chat-header-top">
+        <div class="chat-avatar" style="position:relative">
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+            <rect x="8" y="12" width="14" height="9" rx="1.2" stroke="#22D3EE" stroke-width="1.6"/>
+            <path d="M6 22h20l-1 2H7z" stroke="#22D3EE" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="19" cy="13.5" r="1" fill="#22D3EE"/>
+          </svg>
+          <span class="chat-online"></span>
+        </div>
+        <div class="chat-info">
+          <strong>Equipo PrintOS</strong>
+          <span>Habitualmente responde al instante</span>
+        </div>
+        <button class="chat-close" id="chat-close" aria-label="Cerrar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <p class="chat-greeting">¡Hola! 👋 ¿En qué te podemos ayudar hoy?</p>
+    </div>
+
+    <div class="chat-body">
+      <div class="chat-bubble">Elegí una opción para empezar y te contactamos por WhatsApp:</div>
+      <div class="chat-options">
+        <a href="https://wa.me/5491124686183?text=Hola!%20Quiero%20cotizar%20un%20alquiler%20de%20impresora" class="chat-option" target="_blank">🖨️ Quiero alquilar una impresora</a>
+        <a href="https://wa.me/5491124686183?text=Hola!%20Necesito%20insumos%20originales" class="chat-option" target="_blank">🧾 Necesito comprar insumos</a>
+        <a href="https://wa.me/5491124686183?text=Hola!%20Mi%20impresora%20tiene%20un%20problema" class="chat-option" target="_blank">🔧 Mi impresora no funciona bien</a>
+        <a href="https://wa.me/5491124686183?text=Hola!%20Quiero%20saber%20m%C3%A1s%20de%20la%20IA%20documental" class="chat-option" target="_blank">🤖 Quiero saber más de IA</a>
+        <a href="https://wa.me/5491124686183" class="chat-option primary" target="_blank">💬 Hablar con un asesor</a>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <a href="https://wa.me/5491124686183" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366"><path d="M17.5 14.4l-2.5-1.2c-.4-.2-.9-.1-1.2.2l-.7.8c-.2.2-.5.3-.8.1-1-.5-2.4-1.8-3.2-3.4-.1-.3 0-.6.2-.8l.7-.7c.3-.3.4-.7.2-1.1L9.1 5.7c-.3-.6-1-.8-1.6-.5L6 6c-.6.3-.9 1-.9 1.7.2 1.5.9 4.7 4 7.7 3.2 3.2 6.4 4 7.9 4.2.7.1 1.3-.3 1.5-.9l.4-1.3c.2-.6-.1-1.3-.7-1.6z"/></svg>
+        Continúa la conversación en WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
 
 <script>
   const obs = new IntersectionObserver((entries)=>{
@@ -1474,6 +1545,27 @@
     });
   },{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  const chatToggle = document.getElementById('chat-toggle');
+  const chatPanel = document.getElementById('chat-panel');
+  const chatClose = document.getElementById('chat-close');
+  const chatBadge = chatToggle.querySelector('.chat-badge');
+
+  chatToggle.addEventListener('click',()=>{
+    chatPanel.classList.toggle('open');
+    if(chatBadge) chatBadge.style.display = 'none';
+  });
+  chatClose.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    chatPanel.classList.remove('open');
+  });
+
+  if(!sessionStorage.getItem('chat_seen')){
+    setTimeout(()=>{
+      chatPanel.classList.add('open');
+      sessionStorage.setItem('chat_seen','1');
+    },8000);
+  }
 
   const form = document.getElementById('contact-form');
   const msg = document.getElementById('form-msg');
@@ -1487,15 +1579,15 @@
         const res = await fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
         if(res.ok){
           msg.textContent = '✓ ¡Gracias! Te contactamos en menos de 24hs.';
-          msg.style.color = 'var(--green-700)';
+          msg.style.color = 'var(--cyan-400)';
           form.reset();
         } else {
           msg.textContent = 'Hubo un error. Probá escribirnos a info@printos.com.ar';
-          msg.style.color = '#c33';
+          msg.style.color = '#f87171';
         }
       } catch(err){
         msg.textContent = 'Hubo un error. Probá escribirnos a info@printos.com.ar';
-        msg.style.color = '#c33';
+        msg.style.color = '#f87171';
       }
     });
   }
