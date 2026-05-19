@@ -22,7 +22,6 @@
 
 <style>
   :root{
-    /* Paleta Negro + Cyan */
     --bg:#0A0A0B;
     --bg-2:#111113;
     --bg-3:#18181B;
@@ -88,7 +87,6 @@
   }
   .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan-400);box-shadow:0 0 0 3px rgba(34,211,238,0.25)}
 
-  /* ===== Botones ===== */
   .btn{
     display:inline-flex;align-items:center;gap:8px;
     padding:13px 22px;border-radius:999px;
@@ -129,10 +127,31 @@
   }
   .brand-name{font-size:21px;font-weight:800;letter-spacing:-0.025em}
   .brand-name span{color:var(--cyan-400)}
-  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links{display:flex;gap:24px;align-items:center}
   .nav-links a{color:var(--ink-3);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
   .nav-links a:hover{color:var(--ink)}
-  @media(max-width:880px){.nav-links a:not(.btn){display:none}}
+  @media(max-width:880px){.nav-links a:not(.btn):not(.nav-login){display:none}}
+
+  /* Botón "Acceso clientes" */
+  .nav-login{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:8px 14px;
+    border:1px solid var(--line-2);
+    border-radius:999px;
+    font-size:13px;font-weight:600;
+    color:var(--ink-2)!important;
+    background:transparent;
+    transition:all .25s ease;
+    text-decoration:none;
+  }
+  .nav-login:hover{
+    border-color:var(--cyan-400);
+    color:var(--cyan-400)!important;
+    background:var(--cyan-soft);
+  }
+  .nav-login svg{transition:transform .25s}
+  .nav-login:hover svg{transform:translateX(2px)}
+  @media(max-width:880px){.nav-login{display:none}}
 
   /* ===== HERO ===== */
   .hero{
@@ -163,11 +182,7 @@
   .hero .eyebrow{animation:fadeUp 1s .05s both}
   .hero-cta{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp 1s .45s both}
 
-  /* hero photo */
-  .hero-photo-wrap{
-    position:relative;
-    animation:fadeUp 1s .35s both;
-  }
+  .hero-photo-wrap{position:relative;animation:fadeUp 1s .35s both}
   .hero-photo{
     border-radius:var(--radius-lg);
     overflow:hidden;
@@ -193,8 +208,6 @@
     opacity:0.25;
     z-index:-1;
   }
-
-  /* badge sobre la foto */
   .photo-badge{
     position:absolute;bottom:20px;left:20px;
     background:rgba(10,10,11,0.85);
@@ -218,7 +231,6 @@
 
   @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
-  /* ===== Stats inline ===== */
   .hero-stats{
     margin-top:80px;
     display:grid;grid-template-columns:repeat(4,1fr);
@@ -228,10 +240,7 @@
     animation:fadeUp 1s .6s both;
   }
   @media(max-width:720px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
-  .hero-stat{
-    padding:24px 20px;
-    border-right:1px solid var(--line);
-  }
+  .hero-stat{padding:24px 20px;border-right:1px solid var(--line)}
   .hero-stat:last-child{border-right:none}
   @media(max-width:720px){
     .hero-stat:nth-child(2){border-right:none}
@@ -279,17 +288,13 @@
     font-weight:700;
   }
 
-  /* ===== Section heads ===== */
   .section-head{text-align:center;max-width:680px;margin:0 auto 56px}
   .section-head .h2{margin-top:18px}
   .section-head .lead{margin:18px auto 0}
 
   /* ===== Beneficios ===== */
   .benefits{background:var(--bg)}
-  .benefits-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);
-    gap:18px;
-  }
+  .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
   @media(max-width:1000px){.benefits-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.benefits-grid{grid-template-columns:1fr}}
   .benefit{
@@ -315,10 +320,7 @@
 
   /* ===== Servicios ===== */
   .services{background:var(--bg-2)}
-  .services-grid{
-    display:grid;grid-template-columns:repeat(12,1fr);
-    gap:18px;
-  }
+  .services-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
   .service-card{
     background:var(--bg);
     border:1px solid var(--line);
@@ -355,7 +357,6 @@
   }
   .service-card:hover .service-cta{gap:12px}
 
-  /* card destacada (alquiler) */
   .service-card.featured{
     background:linear-gradient(135deg,#0F172A 0%,#020617 100%);
     border:1px solid var(--cyan-500);
@@ -371,7 +372,6 @@
   .service-card.featured h3{font-size:30px}
   .service-card.featured *{position:relative}
 
-  /* card insumos */
   .service-card.shop{
     background:linear-gradient(135deg,#FFE600 0%,#FFCD00 100%);
     color:#1A1A2E;
@@ -393,10 +393,7 @@
 
   /* ===== Catálogo ===== */
   .catalog{background:var(--bg)}
-  .catalog-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    gap:20px;
-  }
+  .catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   @media(max-width:880px){.catalog-grid{grid-template-columns:1fr}}
   .catalog-card{
     background:var(--bg-2);
@@ -415,7 +412,6 @@
     position:relative;
     overflow:hidden;
   }
-  .catalog-img img{width:100%;height:100%;object-fit:cover}
   .catalog-img svg{width:60%;height:auto;color:var(--cyan-400);opacity:0.85}
   .catalog-tag{
     position:absolute;top:14px;left:14px;
@@ -515,6 +511,134 @@
   .shop-product-brand{font-size:11px;color:#7A8C84}
   .shop-product-price{font-size:15px;font-weight:800;color:#1A1A2E;text-align:right}
   .shop-product-price small{display:block;font-size:10px;color:#7A8C84;font-weight:500;text-transform:uppercase;letter-spacing:0.05em;margin-top:1px}
+
+  /* ===== Portal Clientes (NUEVA sección) ===== */
+  .client-portal{
+    background:var(--bg);
+    position:relative;overflow:hidden;
+  }
+  .client-portal::before{
+    content:"";position:absolute;
+    top:-30%;right:-15%;
+    width:60%;height:160%;
+    background:radial-gradient(ellipse,rgba(34,211,238,0.08) 0%,transparent 60%);
+    pointer-events:none;
+  }
+  .portal-grid{
+    display:grid;grid-template-columns:1fr 1.1fr;
+    gap:60px;align-items:center;
+    position:relative;
+  }
+  @media(max-width:880px){.portal-grid{grid-template-columns:1fr;gap:48px}}
+  .portal-features{margin-top:28px;list-style:none;display:flex;flex-direction:column;gap:14px}
+  .portal-features li{
+    display:flex;gap:12px;align-items:flex-start;
+    color:var(--ink-2);font-size:15px;
+  }
+  .portal-features li svg{
+    color:var(--cyan-400);flex-shrink:0;margin-top:2px;
+  }
+
+  .portal-mockup{
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:var(--shadow-lg);
+    overflow:hidden;
+  }
+  .portal-mockup-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px 18px;
+    background:var(--bg-3);
+    border-bottom:1px solid var(--line);
+  }
+  .portal-mockup-head .url{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;color:var(--ink-4);
+    display:flex;align-items:center;gap:6px;
+  }
+  .portal-mockup-head .url svg{color:var(--cyan-400)}
+  .portal-mockup-body{padding:24px}
+  .portal-dash-head{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:20px;
+  }
+  .portal-dash-head h4{font-size:16px;font-weight:700;color:var(--ink)}
+  .portal-dash-head .period{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;color:var(--ink-3);
+    background:var(--bg-3);
+    padding:4px 8px;border-radius:6px;
+    border:1px solid var(--line);
+  }
+  .portal-metrics{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:10px;margin-bottom:20px;
+  }
+  .portal-metric{
+    background:var(--bg-3);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px;
+  }
+  .portal-metric .lbl{font-size:10px;color:var(--ink-4);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;margin-bottom:6px}
+  .portal-metric .num{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-0.02em;line-height:1}
+  .portal-metric .trend{font-size:10px;color:var(--cyan-400);margin-top:4px;font-weight:600}
+  .portal-metric .trend.down{color:#f87171}
+
+  .portal-chart{
+    background:var(--bg-3);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:14px;
+  }
+  .portal-chart-head{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:14px;
+  }
+  .portal-chart-head .lbl{font-size:11px;color:var(--ink-3);font-weight:600}
+  .portal-chart-head .legend{display:flex;gap:10px;font-size:10px;color:var(--ink-4)}
+  .portal-chart-head .legend span{display:flex;align-items:center;gap:4px}
+  .portal-chart-head .legend .sw{width:8px;height:8px;border-radius:2px}
+  .portal-bars{
+    display:flex;align-items:flex-end;gap:6px;
+    height:60px;
+  }
+  .portal-bar{
+    flex:1;
+    background:linear-gradient(180deg,var(--cyan-400) 0%,var(--cyan-600) 100%);
+    border-radius:3px 3px 0 0;
+    min-height:8px;
+    position:relative;
+    transition:opacity .2s;
+  }
+  .portal-bar.alt{background:linear-gradient(180deg,var(--line-2) 0%,var(--line) 100%)}
+
+  .portal-users{display:flex;flex-direction:column;gap:8px}
+  .portal-user-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:9px 12px;
+    background:var(--bg-3);
+    border:1px solid var(--line);
+    border-radius:8px;
+    font-size:12px;
+  }
+  .portal-user-info{display:flex;align-items:center;gap:8px}
+  .portal-user-avatar{
+    width:24px;height:24px;
+    border-radius:50%;
+    background:var(--cyan-soft);
+    color:var(--cyan-400);
+    display:grid;place-items:center;
+    font-size:10px;font-weight:700;
+    border:1px solid rgba(34,211,238,0.2);
+  }
+  .portal-user-name{color:var(--ink-2);font-weight:500}
+  .portal-user-val{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--ink);font-weight:600;
+  }
 
   /* ===== Service técnico ===== */
   .tech{background:var(--bg-2)}
@@ -756,8 +880,9 @@
     color:var(--cyan-400);margin-bottom:14px;font-weight:500;
   }
   .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-  .footer-col a{color:var(--ink-3);text-decoration:none;font-size:14px;transition:color .2s}
+  .footer-col a{color:var(--ink-3);text-decoration:none;font-size:14px;transition:color .2s;display:inline-flex;align-items:center;gap:6px}
   .footer-col a:hover{color:var(--cyan-400)}
+  .footer-col a .access-icon{color:var(--cyan-400)}
   .footer-bottom{
     border-top:1px solid var(--line);padding-top:24px;
     display:flex;justify-content:space-between;align-items:center;
@@ -862,7 +987,6 @@
   .chat-footer{padding:12px 20px;border-top:1px solid var(--line);background:var(--bg-2);text-align:center}
   .chat-footer a{color:var(--ink-4);font-size:11px;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
 
-  /* scroll reveal */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
   .reveal.visible{opacity:1;transform:none}
 </style>
@@ -888,7 +1012,12 @@
       <a href="#alquiler">Alquiler</a>
       <a href="#tienda">Insumos</a>
       <a href="#service">Service</a>
+      <a href="#portal">Portal</a>
       <a href="#ia">IA</a>
+      <a href="https://clientes.printos.com.ar/login" class="nav-login" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5M15 12H3"/></svg>
+        Acceso clientes
+      </a>
       <a href="#contacto" class="btn btn-primary">
         Cotizar ahora
         <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -904,21 +1033,13 @@
     <div class="hero-grid">
 
       <div>
-        <span class="eyebrow">
-          <span class="dot"></span>
-          Alquiler de impresoras · AMBA
-        </span>
-
-        <h1 class="display">
-          Alquiler de <span class="mark">impresoras</span> y fotocopiadoras para tu empresa.
-        </h1>
-
+        <span class="eyebrow"><span class="dot"></span>Alquiler de impresoras · AMBA</span>
+        <h1 class="display">Alquiler de <span class="mark">impresoras</span> y fotocopiadoras para tu empresa.</h1>
         <p class="lead">
           Equipos Ricoh, HP, Brother y Lexmark con insumos, service y soporte
           incluidos. Sin inversión inicial, sin sorpresas. Pagás un abono mensual
           y nosotros nos encargamos del resto.
         </p>
-
         <div class="hero-cta">
           <a href="#contacto" class="btn btn-primary">
             Pedir cotización
@@ -934,7 +1055,6 @@
       <div class="hero-photo-wrap">
         <div class="hero-photo-glow"></div>
         <div class="hero-photo">
-          <!-- Foto del equipo trabajando con impresora Ricoh -->
           <img src="https://images.pexels.com/photos/7691690/pexels-photo-7691690.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Equipo trabajando con impresora multifunción Ricoh" loading="eager"/>
           <div class="photo-badge">
             <div class="photo-badge-icon">
@@ -951,22 +1071,10 @@
     </div>
 
     <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="num">$0</div>
-        <div class="lbl">Inversión inicial<br>en hardware</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">+200</div>
-        <div class="lbl">Empresas activas<br>en AMBA</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">&lt;4h</div>
-        <div class="lbl">SLA promedio<br>de respuesta</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">24/7</div>
-        <div class="lbl">Soporte técnico<br>incluido</div>
-      </div>
+      <div class="hero-stat"><div class="num">$0</div><div class="lbl">Inversión inicial<br>en hardware</div></div>
+      <div class="hero-stat"><div class="num">+200</div><div class="lbl">Empresas activas<br>en AMBA</div></div>
+      <div class="hero-stat"><div class="num">&lt;4h</div><div class="lbl">SLA promedio<br>de respuesta</div></div>
+      <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Soporte técnico<br>incluido</div></div>
     </div>
   </div>
 </header>
@@ -990,53 +1098,18 @@
     <div class="section-head reveal">
       <span class="eyebrow"><span class="dot"></span>Por qué alquilar con PrintOS</span>
       <h2 class="h2">Una metodología que se <span class="mark">adapta</span> a tu empresa.</h2>
-      <p class="lead">
-        Nos integramos a tus procesos para liberar recursos y que vos te concentres
-        en lo que realmente importa para tu negocio.
-      </p>
+      <p class="lead">Nos integramos a tus procesos para liberar recursos y que vos te concentres en lo que realmente importa para tu negocio.</p>
     </div>
 
     <div class="benefits-grid">
-      <div class="benefit reveal">
-        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h4>Sin inversión inicial</h4>
-        <p>En equipamiento ni insumos. Nosotros nos encargamos de todo desde el día cero.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 0 1 15-6.7l3-2.3v6h-6"/><path d="M21 12a9 9 0 0 1-15 6.7l-3 2.3v-6h6"/></svg></div>
-        <h4>Equipamiento adaptable</h4>
-        <p>Si tu volumen cambia, cambiamos el equipo. Sin renegociar todo el contrato.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <h4>Gestión experta</h4>
-        <p>Del parque de equipos y abastecimiento de insumos. Vos te enfocás en tu negocio.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-        <h4>Soluciones a medida</h4>
-        <p>Cada empresa es única. Evaluamos tu caso y te armamos una propuesta específica.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div>
-        <h4>Atención 1 a 1</h4>
-        <p>Un asesor asignado que conoce tu caso. No call centers ni tickets que se pierden.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h4>Soporte técnico</h4>
-        <p>Asistencia para todo tu parque de impresión en CABA y Gran Buenos Aires.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <h4>Insumos originales</h4>
-        <p>Toners y consumibles que necesitás para una impresión continua y de calidad.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <h4>Costos previsibles</h4>
-        <p>Transformá costos fijos en variables. Pagás solo por lo que imprimís cada mes.</p>
-      </div>
+      <div class="benefit reveal"><div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h4>Sin inversión inicial</h4><p>En equipamiento ni insumos. Nosotros nos encargamos de todo desde el día cero.</p></div>
+      <div class="benefit reveal"><div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 0 1 15-6.7l3-2.3v6h-6"/><path d="M21 12a9 9 0 0 1-15 6.7l-3 2.3v-6h6"/></svg></div><h4>Equipamiento adaptable</h4><p>Si tu volumen cambia, cambiamos el equipo. Sin renegociar todo el contrato.</p></div>
+      <div class="benefit reveal"><div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h4>Gestión experta</h4><p>Del parque de equipos y abastecimiento de insumos. Vos te enfocás en tu negocio.</p></div>
+      <div class="benefit reveal"><div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h4>Soluciones a medida</h4><p>Cada empresa es única. Evaluamos tu caso y te armamos una propuesta específica.</p></div>
+      <div class="benefit reveal"><div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div><h4>Atención 1 a 1</h4><p>Un asesor asignado que conoce tu caso. No call centers ni tickets que se pierden.</p></div>
+      <div class="benefit reveal"><div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Soporte técnico</h4><p>Asistencia para todo tu parque de impresión en CABA y Gran Buenos Aires.</p></div>
+      <div class="benefit reveal"><div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h4>Insumos originales</h4><p>Toners y consumibles que necesitás para una impresión continua y de calidad.</p></div>
+      <div class="benefit reveal"><div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h4>Costos previsibles</h4><p>Transformá costos fijos en variables. Pagás solo por lo que imprimís cada mes.</p></div>
     </div>
   </div>
 </section>
@@ -1054,20 +1127,13 @@
         <span class="num">/ 01 — Servicio principal</span>
         <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="3" width="12" height="6" rx="1"/><path d="M3 9h18v8H3z"/><rect x="6" y="14" width="12" height="7" rx="1"/><circle cx="17" cy="12" r="0.8" fill="currentColor"/></svg></div>
         <h3>Alquiler y venta de impresoras multifunción</h3>
-        <p>
-          Equipos color y blanco y negro, A4 y A3 de las mejores marcas. Ricoh, HP, Brother y Lexmark.
-          Insumos, repuestos y service incluidos en el abono. Si querés comprar el equipo en lugar de alquilarlo,
-          también tenemos opciones de venta directa.
-        </p>
+        <p>Equipos color y blanco y negro, A4 y A3 de las mejores marcas. Ricoh, HP, Brother y Lexmark. Insumos, repuestos y service incluidos en el abono. Si querés comprar el equipo en lugar de alquilarlo, también tenemos opciones de venta directa.</p>
         <a href="#contacto" class="service-cta">Pedí tu cotización <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
       </article>
 
       <article class="service-card shop span-5 reveal">
         <span class="num">/ 02 — Tienda online</span>
-        <div class="ml-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
-          MERCADO SHOP
-        </div>
+        <div class="ml-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg> MERCADO SHOP</div>
         <div class="icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div>
         <h3>Insumos originales</h3>
         <p>Toners, cartuchos, drums y consumibles para todas las marcas. Compra fácil con envío rápido a todo el país.</p>
@@ -1106,14 +1172,7 @@
       <article class="catalog-card reveal">
         <div class="catalog-img">
           <span class="catalog-tag">Oficina chica</span>
-          <svg viewBox="0 0 200 150" fill="none">
-            <ellipse cx="100" cy="138" rx="70" ry="4" fill="currentColor" opacity="0.15"/>
-            <rect x="50" y="50" width="100" height="80" rx="4" fill="currentColor"/>
-            <rect x="50" y="50" width="100" height="22" rx="4" fill="currentColor" opacity="0.7"/>
-            <rect x="60" y="78" width="80" height="6" rx="1" fill="white"/>
-            <rect x="60" y="88" width="80" height="6" rx="1" fill="white" opacity="0.7"/>
-            <rect x="62" y="100" width="76" height="22" rx="2" fill="white"/>
-          </svg>
+          <svg viewBox="0 0 200 150" fill="none"><ellipse cx="100" cy="138" rx="70" ry="4" fill="currentColor" opacity="0.15"/><rect x="50" y="50" width="100" height="80" rx="4" fill="currentColor"/><rect x="50" y="50" width="100" height="22" rx="4" fill="currentColor" opacity="0.7"/><rect x="60" y="78" width="80" height="6" rx="1" fill="white"/><rect x="60" y="88" width="80" height="6" rx="1" fill="white" opacity="0.7"/><rect x="62" y="100" width="76" height="22" rx="2" fill="white"/></svg>
         </div>
         <div class="catalog-info">
           <div class="brand">Brother / HP</div>
@@ -1133,15 +1192,7 @@
       <article class="catalog-card reveal">
         <div class="catalog-img">
           <span class="catalog-tag">Más elegida</span>
-          <svg viewBox="0 0 200 150" fill="none">
-            <ellipse cx="100" cy="138" rx="80" ry="4" fill="currentColor" opacity="0.15"/>
-            <rect x="40" y="38" width="120" height="92" rx="4" fill="currentColor"/>
-            <rect x="40" y="38" width="120" height="26" rx="4" fill="currentColor" opacity="0.75"/>
-            <rect x="115" y="44" width="38" height="14" rx="2" fill="#22D3EE"/>
-            <rect x="50" y="74" width="100" height="6" rx="1" fill="white"/>
-            <rect x="50" y="84" width="100" height="6" rx="1" fill="white" opacity="0.7"/>
-            <rect x="52" y="98" width="96" height="26" rx="2" fill="white"/>
-          </svg>
+          <svg viewBox="0 0 200 150" fill="none"><ellipse cx="100" cy="138" rx="80" ry="4" fill="currentColor" opacity="0.15"/><rect x="40" y="38" width="120" height="92" rx="4" fill="currentColor"/><rect x="40" y="38" width="120" height="26" rx="4" fill="currentColor" opacity="0.75"/><rect x="115" y="44" width="38" height="14" rx="2" fill="#22D3EE"/><rect x="50" y="74" width="100" height="6" rx="1" fill="white"/><rect x="50" y="84" width="100" height="6" rx="1" fill="white" opacity="0.7"/><rect x="52" y="98" width="96" height="26" rx="2" fill="white"/></svg>
         </div>
         <div class="catalog-info">
           <div class="brand">Ricoh / Lexmark</div>
@@ -1161,15 +1212,7 @@
       <article class="catalog-card reveal">
         <div class="catalog-img">
           <span class="catalog-tag">Alto volumen</span>
-          <svg viewBox="0 0 200 150" fill="none">
-            <ellipse cx="100" cy="138" rx="85" ry="4" fill="currentColor" opacity="0.15"/>
-            <rect x="35" y="20" width="130" height="110" rx="4" fill="currentColor"/>
-            <rect x="35" y="20" width="130" height="30" rx="4" fill="currentColor" opacity="0.8"/>
-            <rect x="120" y="26" width="38" height="18" rx="2" fill="#22D3EE"/>
-            <rect x="45" y="60" width="110" height="8" rx="1" fill="white"/>
-            <rect x="45" y="72" width="110" height="8" rx="1" fill="white" opacity="0.7"/>
-            <rect x="48" y="88" width="104" height="36" rx="2" fill="white"/>
-          </svg>
+          <svg viewBox="0 0 200 150" fill="none"><ellipse cx="100" cy="138" rx="85" ry="4" fill="currentColor" opacity="0.15"/><rect x="35" y="20" width="130" height="110" rx="4" fill="currentColor"/><rect x="35" y="20" width="130" height="30" rx="4" fill="currentColor" opacity="0.8"/><rect x="120" y="26" width="38" height="18" rx="2" fill="#22D3EE"/><rect x="45" y="60" width="110" height="8" rx="1" fill="white"/><rect x="45" y="72" width="110" height="8" rx="1" fill="white" opacity="0.7"/><rect x="48" y="88" width="104" height="36" rx="2" fill="white"/></svg>
         </div>
         <div class="catalog-info">
           <div class="brand">Ricoh Pro</div>
@@ -1194,10 +1237,7 @@
   <div class="container">
     <div class="shop-grid">
       <div class="shop-text reveal">
-        <span class="ml-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
-          NUESTRA TIENDA EN MERCADO LIBRE
-        </span>
+        <span class="ml-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg> NUESTRA TIENDA EN MERCADO LIBRE</span>
         <h2>Insumos originales para todas las marcas.</h2>
         <p>Toners, cartuchos, drums, fusores y repuestos. Comprá con la confianza y los envíos de Mercado Libre, con la seguridad de que son productos originales.</p>
 
@@ -1220,33 +1260,123 @@
           <div style="font-size:11px;color:#7A8C84;font-weight:600;letter-spacing:0.05em;text-transform:uppercase">Productos · 124</div>
         </div>
         <div class="shop-products">
-          <div class="shop-product">
-            <div class="shop-product-info">
-              <div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div>
-              <div><div class="shop-product-name">Toner Ricoh SP 4520</div><div class="shop-product-brand">Original · Negro</div></div>
-            </div>
-            <div class="shop-product-price">$45.900<small>12 cuotas</small></div>
+          <div class="shop-product"><div class="shop-product-info"><div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div><div><div class="shop-product-name">Toner Ricoh SP 4520</div><div class="shop-product-brand">Original · Negro</div></div></div><div class="shop-product-price">$45.900<small>12 cuotas</small></div></div>
+          <div class="shop-product"><div class="shop-product-info"><div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div><div><div class="shop-product-name">Cartucho HP 414A</div><div class="shop-product-brand">Original · CMYK</div></div></div><div class="shop-product-price">$38.500<small>12 cuotas</small></div></div>
+          <div class="shop-product"><div class="shop-product-info"><div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div><div><div class="shop-product-name">Drum Brother DR-2340</div><div class="shop-product-brand">Original · 12.000 págs.</div></div></div><div class="shop-product-price">$52.300<small>12 cuotas</small></div></div>
+          <div class="shop-product"><div class="shop-product-info"><div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div><div><div class="shop-product-name">Toner Lexmark 60F4H00</div><div class="shop-product-brand">Original · Alto rendimiento</div></div></div><div class="shop-product-price">$67.800<small>12 cuotas</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTAL CLIENTES ===== -->
+<section class="client-portal" id="portal">
+  <div class="container">
+    <div class="portal-grid">
+      <div class="reveal">
+        <span class="eyebrow"><span class="dot"></span>Portal de clientes</span>
+        <h2 class="h2" style="margin-top:18px">Tus impresiones bajo <span class="mark">control total</span>.</h2>
+        <p class="lead" style="margin-top:18px">
+          Un sistema propio donde nuestros clientes pueden auditar en tiempo real qué se imprime,
+          quién lo imprime y cuánto cuesta. Transparencia total para que sepas exactamente
+          dónde va cada peso de tu presupuesto de impresión.
+        </p>
+
+        <ul class="portal-features">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg> Consumo por usuario, área o departamento</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg> Reportes mensuales con costos detallados</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg> Alertas automáticas por desperdicio o uso anómalo</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg> Comparativa histórica y proyección de gastos</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg> Acceso desde cualquier dispositivo, 24/7</li>
+        </ul>
+
+        <div style="margin-top:36px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://clientes.printos.com.ar/login" class="btn btn-primary" target="_blank" rel="noopener">
+            Ingresar al portal
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5M15 12H3"/></svg>
+          </a>
+          <a href="#contacto" class="btn btn-ghost">Ver una demo</a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="portal-mockup">
+          <div class="portal-mockup-head">
+            <div class="mockup-dots"><span></span><span></span><span></span></div>
+            <div class="url"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> clientes.printos.com.ar</div>
           </div>
-          <div class="shop-product">
-            <div class="shop-product-info">
-              <div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div>
-              <div><div class="shop-product-name">Cartucho HP 414A</div><div class="shop-product-brand">Original · CMYK</div></div>
+          <div class="portal-mockup-body">
+            <div class="portal-dash-head">
+              <h4>Dashboard · Mi empresa</h4>
+              <span class="period">Mayo 2026</span>
             </div>
-            <div class="shop-product-price">$38.500<small>12 cuotas</small></div>
-          </div>
-          <div class="shop-product">
-            <div class="shop-product-info">
-              <div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div>
-              <div><div class="shop-product-name">Drum Brother DR-2340</div><div class="shop-product-brand">Original · 12.000 págs.</div></div>
+
+            <div class="portal-metrics">
+              <div class="portal-metric">
+                <div class="lbl">Páginas</div>
+                <div class="num">3.847</div>
+                <div class="trend">↑ 12% vs abril</div>
+              </div>
+              <div class="portal-metric">
+                <div class="lbl">Costo</div>
+                <div class="num">$84k</div>
+                <div class="trend down">↓ 5% vs abril</div>
+              </div>
+              <div class="portal-metric">
+                <div class="lbl">Usuarios</div>
+                <div class="num">12</div>
+                <div class="trend">activos</div>
+              </div>
             </div>
-            <div class="shop-product-price">$52.300<small>12 cuotas</small></div>
-          </div>
-          <div class="shop-product">
-            <div class="shop-product-info">
-              <div class="shop-product-img"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V4h8v2"/></svg></div>
-              <div><div class="shop-product-name">Toner Lexmark 60F4H00</div><div class="shop-product-brand">Original · Alto rendimiento</div></div>
+
+            <div class="portal-chart">
+              <div class="portal-chart-head">
+                <span class="lbl">Impresiones por día</span>
+                <div class="legend">
+                  <span><span class="sw" style="background:var(--cyan-400)"></span>B&amp;N</span>
+                  <span><span class="sw" style="background:var(--line-2)"></span>Color</span>
+                </div>
+              </div>
+              <div class="portal-bars">
+                <div class="portal-bar" style="height:40%"></div>
+                <div class="portal-bar" style="height:65%"></div>
+                <div class="portal-bar alt" style="height:30%"></div>
+                <div class="portal-bar" style="height:80%"></div>
+                <div class="portal-bar alt" style="height:50%"></div>
+                <div class="portal-bar" style="height:90%"></div>
+                <div class="portal-bar" style="height:75%"></div>
+                <div class="portal-bar alt" style="height:45%"></div>
+                <div class="portal-bar" style="height:60%"></div>
+                <div class="portal-bar" style="height:85%"></div>
+                <div class="portal-bar alt" style="height:55%"></div>
+                <div class="portal-bar" style="height:70%"></div>
+              </div>
             </div>
-            <div class="shop-product-price">$67.800<small>12 cuotas</small></div>
+
+            <div class="portal-users">
+              <div class="portal-user-row">
+                <div class="portal-user-info">
+                  <div class="portal-user-avatar">JP</div>
+                  <span class="portal-user-name">Juan Pérez · Contabilidad</span>
+                </div>
+                <span class="portal-user-val">842 pág.</span>
+              </div>
+              <div class="portal-user-row">
+                <div class="portal-user-info">
+                  <div class="portal-user-avatar">MG</div>
+                  <span class="portal-user-name">María García · Gerencia</span>
+                </div>
+                <span class="portal-user-val">617 pág.</span>
+              </div>
+              <div class="portal-user-row">
+                <div class="portal-user-info">
+                  <div class="portal-user-avatar">RL</div>
+                  <span class="portal-user-name">Ricardo López · Ventas</span>
+                </div>
+                <span class="portal-user-val">534 pág.</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1281,7 +1411,6 @@
 
       <div class="reveal">
         <div class="tech-photo-card">
-          <!-- Foto: pantalla táctil de impresora (close-up tecnológico) -->
           <img src="https://images.pexels.com/photos/17235421/pexels-photo-17235421.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pantalla táctil de impresora multifunción profesional" loading="lazy"/>
           <div class="tech-photo-overlay"></div>
           <div class="tech-photo-content">
@@ -1290,22 +1419,10 @@
             <p style="color:rgba(255,255,255,0.75);font-size:14px;margin-top:6px">Atendemos a más de 200 empresas con SLA real, no promesas.</p>
 
             <div class="tech-photo-stats">
-              <div class="tech-photo-stat">
-                <div class="num">&lt;4h</div>
-                <div class="lbl">Tiempo de respuesta</div>
-              </div>
-              <div class="tech-photo-stat">
-                <div class="num">98%</div>
-                <div class="lbl">Resolución 1ª visita</div>
-              </div>
-              <div class="tech-photo-stat">
-                <div class="num">+200</div>
-                <div class="lbl">Empresas activas</div>
-              </div>
-              <div class="tech-photo-stat">
-                <div class="num">24/7</div>
-                <div class="lbl">Soporte WhatsApp</div>
-              </div>
+              <div class="tech-photo-stat"><div class="num">&lt;4h</div><div class="lbl">Tiempo de respuesta</div></div>
+              <div class="tech-photo-stat"><div class="num">98%</div><div class="lbl">Resolución 1ª visita</div></div>
+              <div class="tech-photo-stat"><div class="num">+200</div><div class="lbl">Empresas activas</div></div>
+              <div class="tech-photo-stat"><div class="num">24/7</div><div class="lbl">Soporte WhatsApp</div></div>
             </div>
 
             <div style="margin-top:20px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan-400);letter-spacing:0.1em;text-transform:uppercase">
@@ -1379,6 +1496,10 @@
           <p>Pagás un abono mensual fijo que incluye el equipo, los insumos (toners), el service técnico y el soporte. Sin inversión inicial, sin sorpresas. Si tu volumen cambia, ajustamos el equipo.</p>
         </details>
         <details class="faq">
+          <summary>¿Qué puedo ver en el portal de clientes?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p>Acceso 24/7 a tu consumo en tiempo real: páginas impresas por usuario, área y equipo. Costos detallados, comparativas mensuales, alertas por desperdicio y reportes exportables. Pensado para auditar y optimizar tu gasto de impresión.</p>
+        </details>
+        <details class="faq">
           <summary>¿Cuáles son las ventajas de alquilar vs comprar?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg></span></summary>
           <p>Con el alquiler ahorrás costos, transformás costos fijos en variables, evitás inversiones grandes en equipos que se desactualizan, y tenés siempre tecnología al día. Además te despreocupás del mantenimiento y los insumos.</p>
         </details>
@@ -1417,13 +1538,17 @@
             <div class="cta-channel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
             <div class="cta-channel-text"><strong>info@printos.com.ar</strong><span>Respondemos en menos de 24hs hábiles</span></div>
           </a>
+          <a href="https://clientes.printos.com.ar/login" class="cta-channel" target="_blank" rel="noopener">
+            <div class="cta-channel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5M15 12H3"/></svg></div>
+            <div class="cta-channel-text"><strong>¿Ya sos cliente?</strong><span>Ingresá al portal de auditoría</span></div>
+          </a>
         </div>
       </div>
 
       <form class="contact-form reveal" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
         <h3>Completá el formulario</h3>
         <p class="form-sub">Y un asesor comercial se comunica con vos.</p>
-        <input type="hidden" name="access_key" value="24d9ffc6-6ebe-4e1c-8fbb-fb987a3f287a">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
         <input type="hidden" name="subject" value="Nueva consulta desde PrintOS">
         <input type="hidden" name="from_name" value="Web PrintOS">
         <input type="checkbox" name="botcheck" style="display:none;">
@@ -1476,13 +1601,18 @@
         </a>
         <p>Alquiler, venta y service de impresoras profesionales para empresas en CABA y AMBA. Marcas oficiales: Ricoh, HP, Brother y Lexmark.</p>
       </div>
-      <div class="footer-col"><h5>Servicios</h5><ul><li><a href="#alquiler">Alquiler</a></li><li><a href="#tienda">Insumos</a></li><li><a href="#service">Service técnico</a></li><li><a href="#ia">IA documental</a></li></ul></div>
+      <div class="footer-col"><h5>Servicios</h5><ul><li><a href="#alquiler">Alquiler</a></li><li><a href="#tienda">Insumos</a></li><li><a href="#service">Service técnico</a></li><li><a href="#portal">Portal de clientes</a></li><li><a href="#ia">IA documental</a></li></ul></div>
       <div class="footer-col"><h5>Marcas</h5><ul><li><a href="#">Ricoh</a></li><li><a href="#">HP</a></li><li><a href="#">Brother</a></li><li><a href="#">Lexmark</a></li></ul></div>
-      <div class="footer-col"><h5>Contacto</h5><ul><li><a href="https://wa.me/5491124686183">WhatsApp</a></li><li><a href="mailto:info@printos.com.ar">Email</a></li><li><a href="#contacto">Cotizar</a></li></ul></div>
+      <div class="footer-col"><h5>Contacto</h5><ul>
+        <li><a href="https://clientes.printos.com.ar/login" target="_blank" rel="noopener"><svg class="access-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5M15 12H3"/></svg> Acceso clientes</a></li>
+        <li><a href="https://wa.me/5491124686183">WhatsApp</a></li>
+        <li><a href="mailto:info@printos.com.ar">Email</a></li>
+        <li><a href="#contacto">Cotizar</a></li>
+      </ul></div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 PrintOS · Hecho con cuidado en Argentina</span>
-      <span class="mono" style="font-size:11px">v 4.0</span>
+      <span class="mono" style="font-size:11px">v 4.1</span>
     </div>
   </div>
 </footer>
@@ -1524,7 +1654,7 @@
         <a href="https://wa.me/5491124686183?text=Hola!%20Quiero%20cotizar%20un%20alquiler%20de%20impresora" class="chat-option" target="_blank">🖨️ Quiero alquilar una impresora</a>
         <a href="https://wa.me/5491124686183?text=Hola!%20Necesito%20insumos%20originales" class="chat-option" target="_blank">🧾 Necesito comprar insumos</a>
         <a href="https://wa.me/5491124686183?text=Hola!%20Mi%20impresora%20tiene%20un%20problema" class="chat-option" target="_blank">🔧 Mi impresora no funciona bien</a>
-        <a href="https://wa.me/5491124686183?text=Hola!%20Quiero%20saber%20m%C3%A1s%20de%20la%20IA%20documental" class="chat-option" target="_blank">🤖 Quiero saber más de IA</a>
+        <a href="https://clientes.printos.com.ar/login" class="chat-option" target="_blank">🔐 Soy cliente, quiero ingresar al portal</a>
         <a href="https://wa.me/5491124686183" class="chat-option primary" target="_blank">💬 Hablar con un asesor</a>
       </div>
     </div>
